@@ -1,9 +1,9 @@
 {
   "targets": {
-    "jaspero-jms": {
+    "jaspero-automated-tests": {
       "hosting": {
         "cms": [
-          "jaspero-jms"
+          "jaspero-automated-tests"
         ]
       }
     }

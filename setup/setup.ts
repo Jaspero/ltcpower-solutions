@@ -9,7 +9,7 @@ const serviceAccount = require('./serviceAccountKey.json');
  */
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://jaspero-jms.firebaseio.com'
+  databaseURL: 'https://jaspero-automated-tests.firebaseio.com'
 });
 
 async function exec() {
@@ -17,7 +17,6 @@ async function exec() {
 
   for (const collection of COLLECTIONS) {
     for (const document of collection.documents) {
-
       const {id, ...data} = document;
 
       await fStore.collection(collection.name).doc(id).set(data);
@@ -25,13 +24,15 @@ async function exec() {
   }
 
   for (const module of MODULES) {
-
     const {id, ...data} = module;
 
-    await fStore.collection('modules').doc(id).set({
-      ...data,
-      createdOn: Date.now()
-    });
+    await fStore
+      .collection('modules')
+      .doc(id)
+      .set({
+        ...data,
+        createdOn: Date.now()
+      });
   }
 }
 
@@ -44,5 +45,3 @@ exec()
     console.error(error);
     process.exit(1);
   });
-
-

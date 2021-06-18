@@ -11,13 +11,13 @@
 # JMS
 
 JMS is a CMS based on Angular that is fully configurable through JSON schema-s. JMS is very
-opinionated especially when it comes to things like templating engines and email services, even though this should be easily interchangeable. 
+opinionated especially when it comes to things like templating engines and email services, even though this should be easily interchangeable.
 
 Currently it only supports [firestore](https://firebase.google.com/docs/firestore) as its
 back-end but other implementations are planed and instructions for writing your own integration can
 be found in the [wiki](https://github.com/Jaspero/jms/wiki/Custom-Integrations).
 
-A live example can be found [here](https://jaspero-jms.web.app/).
+A live example can be found [here](https://jaspero-automated-tests.web.app/).
 
 For more information consult our [wiki](https://github.com/Jaspero/jms/wiki).
 

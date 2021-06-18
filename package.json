@@ -38,7 +38,7 @@
   "bugs": {
     "url": "https://github.com/jaspero/jms/issues"
   },
-  "homepage": "https://jaspero-jms.firebaseapp.com",
+  "homepage": "https://jaspero-automated-tests.firebaseapp.com",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
