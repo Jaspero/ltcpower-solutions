@@ -3,12 +3,12 @@
  */
 export const ENV_CONFIG = {
   firebase: {
-    apiKey: "AIzaSyBpOVW-c-ExPTUHRAXRO8-yTUVPq0pKS1g",
-    authDomain: "jaspero-jms.firebaseapp.com",
-    databaseURL: "https://jaspero-jms.firebaseio.com",
-    projectId: "jaspero-jms",
-    storageBucket: "jaspero-jms.appspot.com",
-    messagingSenderId: "82190793734",
-    appId: "1:82190793734:web:e6abf3c3a3bbb744"
+    apiKey: 'AIzaSyArhhzlN_G1P8bc8cNYlrI7AWqOOOYsE7g',
+    authDomain: 'jaspero-automated-tests.firebaseapp.com',
+    databaseURL: 'https://jaspero-automated-tests.firebaseio.com',
+    projectId: 'jaspero-automated-tests',
+    storageBucket: 'jaspero-automated-tests.appspot.com',
+    messagingSenderId: '110774552019',
+    appId: '1:110774552019:web:ce7c94c0935a2d22911b26'
   }
 };

@@ -18,7 +18,7 @@ export const SETTINGS_COLLECTION = {
             value: '/m/forms'
           },
           {
-            icon: 'pages',
+            icon: 'web',
             label: 'MODULES.PAGES',
             type: 'link',
             value: '/m/pages'
