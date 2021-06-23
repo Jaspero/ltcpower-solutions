@@ -12,12 +12,6 @@ export const SETTINGS_COLLECTION = {
             value: '/dashboard'
           },
           {
-            icon: '',
-            label: 'MODULES.FORMS',
-            type: 'link',
-            value: '/m/forms'
-          },
-          {
             icon: 'web',
             label: 'MODULES.PAGES',
             type: 'link',

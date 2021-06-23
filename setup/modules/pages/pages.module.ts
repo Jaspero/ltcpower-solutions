@@ -18,7 +18,7 @@ const {css: styles} = minify(
 
 export const PAGES_MODULE = {
   id: 'pages',
-  name: 'MODULES.PAGES',
+  name: 'Pages',
   authorization: {
     write: ['admin']
   },
