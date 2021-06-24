@@ -5,9 +5,9 @@
     </a>
   </div>
   <div class="header-links hide-s c-accent hide-s col-9">
-
     <li *ngFor="let page of pages$ | async">
-      <a class="m-x-s header-link"  [routerLink]="page.id" routerLinkActive="active">{{page.title}}</a></li>
+      <a class="m-x-s header-link"  [routerLink]="page.id" routerLinkActive="active">{{page.title}}</a>
+    </li>
   </div>
 <!--  <div class="mobile-menu show-s" (click)="toggleMenu()" [class.active-menu]="menu">-->
 <!--    <span class="mobile-menu-line-1"></span>-->

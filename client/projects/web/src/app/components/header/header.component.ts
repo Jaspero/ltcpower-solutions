@@ -1,10 +1,9 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import {Observable} from 'rxjs';
-import {Page} from '../../modules/page/page.interface';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
-import {map} from 'rxjs/operators';
 import {Router} from '@angular/router';
-import {StateService} from '@jaspero/form-builder/lib/services/state.service';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {Page} from '../../modules/page/page.interface';
 
 @Component({
   selector: 'ltc-header',
@@ -13,13 +12,13 @@ import {StateService} from '@jaspero/form-builder/lib/services/state.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
-
   constructor(
     private afs: AngularFirestore,
-    private router: Router,
-    // public state: StateService,
+    private router: Router
   ) { }
+
   pages$: Observable<Page[]>;
+
   ngOnInit() {
     this.pages$ = this.afs
       .collection('pages', ref =>

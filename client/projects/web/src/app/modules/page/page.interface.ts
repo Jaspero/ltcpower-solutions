@@ -1,4 +1,6 @@
 export interface Page {
+  id: string;
+  title: string;
   meta: {
     title: string;
     keywords?: string;
