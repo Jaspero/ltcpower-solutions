@@ -1,19 +1,13 @@
-<div class="header flex jc-between">
+<div class="header grid jc-between">
   <div class="header-logo col-3">
     <a [routerLink]="['/']">
       <img src="assets/icons/logo.svg" alt="Logo">
     </a>
   </div>
-  <div class="header-links hide-s c-accent hide-s">
-    <a class="m-x-s header-link" routerLinkActive="active">
-      Home
-    </a>
-    <a class="m-x-s header-link" routerLinkActive="active">
-      About
-    </a>
-    <a class="m-x-s header-link" routerLinkActive="active">
-      Contact
-    </a>
+  <div class="header-links hide-s c-accent hide-s col-9">
+
+    <li *ngFor="let page of pages$ | async">
+      <a class="m-x-s header-link"  [routerLink]="page.id" routerLinkActive="active">{{page.title}}</a></li>
   </div>
 <!--  <div class="mobile-menu show-s" (click)="toggleMenu()" [class.active-menu]="menu">-->
 <!--    <span class="mobile-menu-line-1"></span>-->

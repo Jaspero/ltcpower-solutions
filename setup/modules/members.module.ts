@@ -3,7 +3,7 @@ import {CREATED_ON} from './shared/created-on';
 export const MEMBERS_MODULE = {
   id: 'members',
   name: 'Members',
-  description: 'Collection of roles that can be assigned to users',
+  description: 'Collection of members',
   authorization: {
     read: ['admin'],
     write: ['admin']

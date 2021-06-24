@@ -9,16 +9,18 @@ import {CommonBlockComponent} from './blocks/common.block';
 import {ContentComponent} from './blocks/content/content.component';
 import {FormComponent} from './blocks/form/form.component';
 import {BlockLinkDirective} from './directives/block-link/block-link.directive';
+import {InventoryBlockComponent} from '@shared/blocks/blocks/inventory-block/inventory-block.component';
 
 export const BLOCKS = {
   content: ContentComponent,
-  form: FormComponent
+  form: FormComponent,
+  inventory: InventoryBlockComponent
 };
 
 const B_COMPONENTS = [
   BlockRendererComponent,
-
   ContentComponent,
+  InventoryBlockComponent,
   FormComponent
 ];
 

@@ -7,13 +7,13 @@ export const SETTINGS_COLLECTION = {
         items: [
           {
             icon: 'dashboard',
-            label: 'LAYOUT.DASHBOARD',
+            label: 'DASHBOARD',
             type: 'link',
             value: '/dashboard'
           },
           {
             icon: 'web',
-            label: 'MODULES.PAGES',
+            label: 'PAGES',
             type: 'link',
             value: '/m/pages'
           },
