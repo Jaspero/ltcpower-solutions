@@ -10,17 +10,20 @@ import {ContentComponent} from './blocks/content/content.component';
 import {FormComponent} from './blocks/form/form.component';
 import {BlockLinkDirective} from './directives/block-link/block-link.directive';
 import {InventoryBlockComponent} from '@shared/blocks/blocks/inventory-block/inventory-block.component';
+import { BackgroundHeroBlockComponent } from './blocks/background-hero-block/background-hero-block.component';
 
 export const BLOCKS = {
   content: ContentComponent,
   form: FormComponent,
-  inventory: InventoryBlockComponent
+  inventory: InventoryBlockComponent,
+  hero: BackgroundHeroBlockComponent
 };
 
 const B_COMPONENTS = [
   BlockRendererComponent,
   ContentComponent,
   InventoryBlockComponent,
+  BackgroundHeroBlockComponent,
   FormComponent
 ];
 
@@ -29,7 +32,7 @@ const B_COMPONENTS = [
     CommonBlockComponent,
     BlockLinkDirective,
 
-    ...B_COMPONENTS
+    ...B_COMPONENTS,
   ],
   exports: [
     ...B_COMPONENTS

@@ -1,8 +1,8 @@
 import {COMMON_OPTIONS} from './shared';
 
-export const INVENTORY_BLOCK = {
-  id: 'inventory-block',
-  label: 'Inventory-block',
+export const BACKGROUND_HERO_BLOCK = {
+  id: 'hero',
+  label: 'Hero',
   icon: 'subject',
   previewTemplate: `<jms-content [data]="data"></jms-content>`,
   previewValue: {
@@ -14,22 +14,28 @@ export const INVENTORY_BLOCK = {
       {
         type: 'empty',
         fields: [
-          '/content'
+          '/title',
+          '/subtitle',
+          '/image'
         ],
       },
       ...COMMON_OPTIONS.segment
     ],
     schema: {
       properties: {
-        content: {type: 'string'},
+        title: {type: 'string'},
+        subtitle: {type: 'string'},
+        image: {type: 'string'},
         ...COMMON_OPTIONS.properties
       }
     },
     definitions: {
-      content: {
-        label: '',
+      title: {label: 'Title'},
+      subtitle: { label: 'Subtitle',},
+      image: {
+        label: 'Background',
         component: {
-          type: 'tinymce'
+          type: 'image'
         }
       },
       ...COMMON_OPTIONS.definitions

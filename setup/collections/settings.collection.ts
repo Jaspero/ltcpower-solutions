@@ -18,6 +18,12 @@ export const SETTINGS_COLLECTION = {
             value: '/m/pages'
           },
           {
+            icon: 'precision_manufacturing',
+            label: 'CATEGORIES',
+            type: 'link',
+            value: '/m/categories'
+          },
+          {
             children: [
               {
                 icon: 'supervised_user_circle',

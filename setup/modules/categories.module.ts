@@ -1,9 +1,9 @@
 import {CREATED_ON} from './shared/created-on';
 
-export const MEMBERS_MODULE = {
-  id: 'members',
-  name: 'Members',
-  description: 'Collection of members',
+export const CATEGORIES_MODULE = {
+  id: 'categories',
+  name: 'Categories',
+  description: 'Collection of categories',
   authorization: {
     read: ['admin'],
     write: ['admin']
@@ -23,8 +23,8 @@ export const MEMBERS_MODULE = {
         {
           fields: [
             '/createdOn',
-            '/name',
-            '/description'
+            '/title',
+            '/image'
           ]
         }
       ]
@@ -33,12 +33,12 @@ export const MEMBERS_MODULE = {
       tableColumns: [
         CREATED_ON.column(),
         {
-          key: '/name',
-          label: 'Name'
+          key: '/title',
+          label: 'Title'
         },
         {
-          key: '/description',
-          label: 'Description'
+          key: '/image',
+          label: 'Image'
         }
       ],
       actions: [
@@ -50,30 +50,27 @@ export const MEMBERS_MODULE = {
   },
   schema: {
     properties: {
-      id: {
+      title: {
         type: 'string'
       },
-      name: {
-        type: 'string',
-      },
-      description: {
-        type: 'string',
+      image: {
+        type: 'string'
       },
       ...CREATED_ON.property
     },
     required: [
-      'name',
-      'createdOn'
+      'title',
+      'image'
     ]
   },
   definitions: {
-    name: {
-      label: 'Name'
+    title: {
+      label: 'Title'
     },
-    description: {
-      label: 'Description',
+    image: {
+      label: 'Image',
       component: {
-        type: 'textarea'
+        type: 'image'
       }
     },
     ...CREATED_ON.definition()

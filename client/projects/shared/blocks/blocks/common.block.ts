@@ -36,7 +36,6 @@ export class CommonBlockComponent {
   @HostBinding('class')
   get classes() {
     return [
-      'block',
       `b-size-${this.data.size || 'regular'}`,
       `b-va-${this.data.verticalAlignment || 'center'}`,
       ...this.data.contained ? ['contained'] : [],

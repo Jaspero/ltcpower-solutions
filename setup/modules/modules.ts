@@ -3,7 +3,8 @@ import {PAGES_MODULE} from './pages/pages.module';
 import {ROLES_MODULE} from './roles.module';
 import {USER_INVITES_MODULE} from './user-invites.module';
 import {USERS_MODULE} from './users.module';
-import {MEMBERS_MODULE} from './members.module';
+import {CATEGORIES_MODULE} from './categories.module';
+
 
 /**
  * Schemas for all of the modules
@@ -14,5 +15,5 @@ export const MODULES = [
   USER_INVITES_MODULE,
   PAGES_MODULE,
   FORMS_MODULE,
-  MEMBERS_MODULE
+  CATEGORIES_MODULE
 ];

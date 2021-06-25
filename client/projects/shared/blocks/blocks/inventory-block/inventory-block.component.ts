@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
+import {CommonBlockComponent, CommonOptions} from '@shared/blocks/blocks/common.block';
 
 @Component({
   selector: 'jms-inventory-block',
@@ -6,11 +7,9 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./inventory-block.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InventoryBlockComponent implements OnInit {
+export class InventoryBlockComponent extends CommonBlockComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input()
+  data: any;
 
 }

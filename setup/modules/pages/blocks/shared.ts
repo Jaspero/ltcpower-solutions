@@ -48,22 +48,22 @@ export const COMMON_OPTIONS = {
       }
     },
     contained: {
-      label: 'PB.FORM.BLOCKS.SHARED.CONTAINED'
+      label: 'bg-size:contained'
     },
     background: {
-      label: 'PB.FORM.BLOCKS.SHARED.BACKGROUND'
+      label: 'Background url'
     },
     backgroundRepeat: {
-      label: 'PB.FORM.BLOCKS.SHARED.BACKGROUND_REPEAT'
+      label: 'backgroundRepeat'
     },
     backgroundSize: {
-      label: 'PB.FORM.BLOCKS.SHARED.BACKGROUND_SIZE',
+      label: 'Background-size',
       component: {
         type: 'select',
         configuration: {
           dataSet: [
-            {name: 'PB.FORM.BLOCKS.SHARED.BACKGROUND_SIZE_COVER', value: 'cover'},
-            {name: 'PB.FORM.BLOCKS.SHARED.BACKGROUND_SIZE_CONTAIN', value: 'regular'},
+            {name: 'bg-size:cover', value: 'cover'},
+            {name: 'bg-size:contain', value: 'regular'},
           ]
         }
       }
@@ -82,7 +82,7 @@ export const COMMON_OPTIONS = {
       }
     },
     additionalStyle: {
-      label: 'PB.FORM.BLOCKS.SHARED.ADDITIONAL_STYLE',
+      label: 'Additional style',
       component: {
         type: 'monaco',
         configuration: {

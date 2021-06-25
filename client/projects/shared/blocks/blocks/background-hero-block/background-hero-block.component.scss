@@ -1,0 +1,61 @@
+:host {
+  display: block;
+  min-height: 205px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+.hero {
+  position: relative;
+  padding: 100px 80px;
+  color: white;
+  h1,
+  h3 {
+    z-index: 23;
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 30px;
+    margin-top: 50px;
+    color: #CECECE;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0);
+    opacity: .6;
+  }
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 93%;
+}
+
+
+
+
+
+/* Mobile styles
+ *============================================================================*/
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 30px;
+  }
+  .hero {
+    padding: 50px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
+

@@ -1,17 +1,22 @@
 import {minify} from 'csso';
 import {readFileSync} from 'fs';
 import {join} from 'path';
-import {CREATED_ON} from '../shared/created-on';
 import {FORMAT_SEARCH} from '../shared/format-search';
 import {META} from '../shared/meta';
 import {CONTENT_BLOCK} from './blocks/content.block';
 import {FORM_BLOCK} from './blocks/form.block';
-import {INVENTORY_BLOCK} from './blocks/inventory-block';
+import {INVENTORY_BLOCK} from './blocks/inventory.block';
+import {BACKGROUND_HERO_BLOCK} from './blocks/background-hero-block';
+import {CARDS} from './blocks/cards.block';
+import {CATEGORIES_MODULE} from '../categories.module';
 
 const blocks = [
   CONTENT_BLOCK,
   FORM_BLOCK,
-  INVENTORY_BLOCK
+  INVENTORY_BLOCK,
+  BACKGROUND_HERO_BLOCK,
+  CARDS,
+  CATEGORIES_MODULE
 ];
 
 const {css: styles} = minify(
@@ -32,7 +37,9 @@ export const PAGES_MODULE = {
           type: 'card',
           fields: [
             '/id',
-            '/title'
+            '/title',
+            '/featured',
+            '/order'
           ]
         },
         {
@@ -48,7 +55,8 @@ export const PAGES_MODULE = {
       tableColumns: [
 
         {key: '/title', label: 'PB.FORM.TITLE'},
-        {key: '/id', label: 'URL'}
+        {key: '/id', label: 'URL'},
+        {key: '/featured', label: 'Featured', control: true },
       ]
     }
   },
@@ -56,9 +64,12 @@ export const PAGES_MODULE = {
     properties: {
       id: {type: 'string'},
       title: {type: 'string'},
+      featured: {type: 'boolean'},
+      order: {type: 'number'},
       blocks: {type: 'array'},
       ...META.property(),
-    }
+    },
+    required: ['order']
   },
   definitions: {
     id: {
@@ -68,6 +79,8 @@ export const PAGES_MODULE = {
       hint: 'PB.FORM.ID_HINT'
     },
     title: {label: 'Title'},
+    featured: {label: 'Featured'},
+    order: {label: 'Order'},
     blocks: {
       component: {
         type: 'pb-blocks',
