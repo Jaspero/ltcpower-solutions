@@ -2,7 +2,7 @@ import {Component, OnInit, ChangeDetectionStrategy, Input, ElementRef} from '@an
 import {CommonBlockComponent, CommonOptions} from '@shared/blocks/blocks/common.block';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {Router} from '@angular/router';
-import {map} from 'rxjs/operators';
+import {map, tap} from 'rxjs/operators';
 import {Page} from '../../../../web/src/app/modules/page/page.interface';
 import {Observable} from 'rxjs';
 
@@ -19,7 +19,7 @@ export class InventoryBlockComponent extends CommonBlockComponent implements OnI
   ) { super(el); }
 
   @Input()
-  data: any;
+    data: any;
 
   categories$: Observable<any[]>;
 
@@ -35,6 +35,7 @@ export class InventoryBlockComponent extends CommonBlockComponent implements OnI
               ...(it.data() as any)
             })) as Page[]
         ),
+        tap(console.log)
       );
   }
 }
