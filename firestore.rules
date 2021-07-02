@@ -31,7 +31,7 @@ service cloud.firestore {
     }
 
     match /{module}/{document=**} {
-      allow read: if hasRoles(['user', 'admin']) || hasId(resource);
+      allow read: if true;
       allow write: if hasRoles(['admin']) || hasId(resource);
     }
   }

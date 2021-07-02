@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'ltc-footer',
@@ -7,10 +7,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent implements OnInit {
-
   constructor() { }
-  year = new Date().getFullYear();
-  ngOnInit(): void {
-  }
 
+  year = new Date().getFullYear();
+
+  ngOnInit() {
+  }
 }
