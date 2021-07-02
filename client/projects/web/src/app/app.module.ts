@@ -4,7 +4,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
-import {AngularFirestore, AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireModule} from '@angular/fire';
 import {ENV_CONFIG} from '../../../../env-config';
 import {USE_EMULATOR as USE_FIRESTORE_EMULATOR} from '@angular/fire/firestore';

@@ -1,7 +1,6 @@
 {
-  "name": "@jaspero/jms",
+  "name": "@jaspero/ltcpower-rentals",
   "version": "4.1.1",
-  "license": "MIT",
   "scripts": {
     "start:emulator": "firebase emulators:start --export-on-exit=.emulator-export --import=.emulator-export",
     "start:cms": "npm --prefix client run start:cms",
