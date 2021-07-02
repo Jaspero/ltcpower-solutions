@@ -1,7 +1,7 @@
 import {CREATED_ON} from './shared/created-on';
 
-export const SUBCATEGRIESS_MODULE = {
-  id: 'sub-categories',
+export const SUBCATEGORIES_MODULE = {
+  id: 'subcategories',
   name: 'Sub-categories',
   description: 'Collection of sub-categories',
   authorization: {
@@ -10,6 +10,7 @@ export const SUBCATEGRIESS_MODULE = {
   },
   layout: {
     editTitleKey: 'name',
+    sort: CREATED_ON.sort,
     instance: {
       segments: [
         {
@@ -29,6 +30,7 @@ export const SUBCATEGRIESS_MODULE = {
     },
     table: {
       tableColumns: [
+        CREATED_ON.column(),
         {
           key: '/title',
           label: 'Title'
@@ -69,6 +71,7 @@ export const SUBCATEGRIESS_MODULE = {
         type: 'image'
       }
     },
+    ...CREATED_ON.definition()
   },
   metadata: {
     autoSave: 0

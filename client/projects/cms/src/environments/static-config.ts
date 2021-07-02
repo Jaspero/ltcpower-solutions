@@ -27,10 +27,10 @@ export const STATIC_CONFIG = {
         value: '/m/categories'
       },
       {
-        icon: 'precision_manufacturing',
+        icon: 'subject',
         label: 'Sub-categories',
         type: 'link',
-        value: '/m/categories'
+        value: '/m/subcategories'
       },
       {
         children: [
