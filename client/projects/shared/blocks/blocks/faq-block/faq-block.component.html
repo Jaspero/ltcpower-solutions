@@ -1,1 +1,32 @@
-<p>faq-block works!</p>
+<div class="grid jc-between">
+  <div class="col-8 col-s-6 col-xs-12 faq-wrapper no-padding m-y-l">
+    <p class="faq-title p-x-s">{{data.title}}</p>
+    <div class="wrapper m-t-s flex fd-col ai-start jc-center p-x-s">
+      <div *ngFor="let item of faq$ | async; index as index;">
+        <p class="question" (click)="activeIndex = index">{{item.question}}</p>
+        <p class="answer" [class.active]="activeIndex === index">{{item.answer}}</p>
+      </div>
+      <a routerLink="/faq" class="m-t-s flex ai-center c-primary">
+        <p class="c-primary m-r-xs fw-bold">More</p>
+        <img src="assets/icons/read-more.svg" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="col-4 col-s-6 col-xs-12 contat-wrapper no-padding m-y-l">
+    <p class="contact-title p-x-s">Contact us</p>
+    <div class="wrapper m-t-s flex fd-col ai-start jc-center p-x-s">
+      <a [href]="data.googleMapLink" target="_blank">
+        <img src="assets/icons/location.svg" alt="Map pin icon">
+        <span class="m-l-xs">{{data.address}}</span>
+      </a>
+      <a [href]="'tel:' + data.phoneNumber" target="_blank">
+        <img src="assets/icons/phone.svg" alt="Phone icon" class="m-y-s">
+        <span class="m-l-xs">{{data.phoneNumber}}</span>
+      </a>
+      <a [href]="'mailto:' + data.email">
+        <img src="assets/icons/mail.svg" alt="Envelope icon">
+        <span class="m-l-xs">{{data.email}}</span>
+      </a>
+    </div>
+  </div>
+</div>

@@ -33,6 +33,12 @@ export const STATIC_CONFIG = {
         value: '/m/subcategories'
       },
       {
+        icon: 'question_answer',
+        label: 'Faq',
+        type: 'link',
+        value: '/m/faq'
+      },
+      {
         children: [
           {
             icon: 'supervised_user_circle',

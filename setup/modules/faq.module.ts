@@ -1,6 +1,6 @@
 import {CREATED_ON} from './shared/created-on';
 
-export const CATEGORIES_MODULE = {
+export const FAQ_MODULE = {
   id: 'faq',
   name: 'Faq',
   description: 'Faq collection',

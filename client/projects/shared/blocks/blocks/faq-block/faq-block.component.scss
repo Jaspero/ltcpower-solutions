@@ -1,0 +1,45 @@
+.grid {
+  border-top: 3px solid #FF6B18;
+  border-bottom: 1px solid #E5E5E5;
+}
+.faq-title, .contact-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.question {
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.answer {
+  max-height: 0;
+  transition: max-height .2s;
+  visibility: hidden;
+
+  &.active {
+    visibility: visible;
+    max-height: 300px;
+  }
+}
+
+
+/* Mobile styles
+ *============================================================================*/
+
+@media (max-width: 1200px) {
+  .faq-wrapper, .contat-wrapper {
+    padding: 10px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .question, .answer {
+    font-size: 14px;
+  }
+}

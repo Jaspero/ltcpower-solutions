@@ -17,7 +17,8 @@ export const BLOCKS = {
   content: ContentComponent,
   form: FormComponent,
   inventory: InventoryBlockComponent,
-  hero: BackgroundHeroBlockComponent
+  hero: BackgroundHeroBlockComponent,
+  faq: FaqBlockComponent
 };
 
 const B_COMPONENTS = [
@@ -26,6 +27,7 @@ const B_COMPONENTS = [
   InventoryBlockComponent,
   BackgroundHeroBlockComponent,
   FormComponent,
+  FaqBlockComponent
 ];
 
 @NgModule({
@@ -34,7 +36,6 @@ const B_COMPONENTS = [
     BlockLinkDirective,
 
     ...B_COMPONENTS,
-      FaqBlockComponent,
   ],
   exports: [
     ...B_COMPONENTS

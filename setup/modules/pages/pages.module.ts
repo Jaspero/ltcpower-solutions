@@ -7,17 +7,16 @@ import {PROCESSED} from './processed.const';
 import {INVENTORY_BLOCK} from './blocks/inventory.block';
 import {BACKGROUND_HERO_BLOCK} from './blocks/background-hero-block';
 import {CARDS} from './blocks/cards.block';
-import {CATEGORIES_MODULE} from '../categories.module';
-import {SUBCATEGORIES_MODULE} from '../sub-categories.module';
+import {FAQ_BLOCK} from './blocks/faq-block';
+
 
 const blocks = [
   CONTENT_BLOCK,
   FORM_BLOCK,
   INVENTORY_BLOCK,
   BACKGROUND_HERO_BLOCK,
+  FAQ_BLOCK,
   CARDS,
-  CATEGORIES_MODULE,
-  SUBCATEGORIES_MODULE
 ];
 
 export const PAGES_MODULE = {
