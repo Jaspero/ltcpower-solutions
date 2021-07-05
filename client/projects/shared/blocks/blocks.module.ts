@@ -11,6 +11,7 @@ import {FormComponent} from './blocks/form/form.component';
 import {BlockLinkDirective} from './directives/block-link/block-link.directive';
 import {InventoryBlockComponent} from '@shared/blocks/blocks/inventory-block/inventory-block.component';
 import { BackgroundHeroBlockComponent } from './blocks/background-hero-block/background-hero-block.component';
+import { FaqBlockComponent } from './blocks/faq-block/faq-block.component';
 
 export const BLOCKS = {
   content: ContentComponent,
@@ -24,7 +25,7 @@ const B_COMPONENTS = [
   ContentComponent,
   InventoryBlockComponent,
   BackgroundHeroBlockComponent,
-  FormComponent
+  FormComponent,
 ];
 
 @NgModule({
@@ -33,6 +34,7 @@ const B_COMPONENTS = [
     BlockLinkDirective,
 
     ...B_COMPONENTS,
+      FaqBlockComponent,
   ],
   exports: [
     ...B_COMPONENTS
