@@ -1,0 +1,13 @@
+<div class="cards">
+  <div class="card" *ngFor="let card of data.cards" [ngClass]="card.style" [ngStyle]="cardStyle(card)" [etBlockLink]="card.linkHref">
+    <div *ngIf="card.image" [fbPbImageIE]="{property: 'image', data: data}">
+      <img [src]="card.image">
+    </div>
+
+    <div>
+      <div class="w-full" *ngIf="card.title" [fbPbSingleLineIE]="{property: 'title', data: data}" [innerHTML]="card.title | jpSanitize"></div>
+      <div class="w-full" *ngIf="card.subtitle" [fbPbSingleLineIE]="{property: 'subtitle', data: data}" [innerHTML]="card.subtitle | jpSanitize"></div>
+      <div class="w-full" *ngIf="card.content" [fbPbSingleLineIE]="{property: 'content', data: data}" [innerHTML]="card.content | jpSanitize"></div>
+    </div>
+  </div>
+</div>

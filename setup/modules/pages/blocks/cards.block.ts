@@ -2,9 +2,9 @@ import {COMMON_OPTIONS} from './shared';
 
 export const CARDS = {
   id: 'cards',
-  label: 'PB.FORM.BLOCKS.CARDS.TITLE',
+  label: 'Cards',
   icon: 'view_column',
-  previewTemplate: `<et-cards [data]="data"></et-cards>`,
+  previewTemplate: `<ltc-cards [data]="data"></ltc-cards>`,
   previewValue: {
     cards: [
       {
@@ -35,7 +35,7 @@ export const CARDS = {
   form: {
     segments: [
       {
-        title: 'PB.FORM.BLOCKS.CARDS.TITLE',
+        title: 'CARDS',
         array: '/cards',
         fields: [
           '/style',
@@ -44,7 +44,7 @@ export const CARDS = {
         ]
       },
       {
-        title: 'PB.FORM.BLOCKS.SHARED.BLOCK_OPTIONS',
+        title: 'Style',
         fields: [
           '/style',
         ]
@@ -75,33 +75,33 @@ export const CARDS = {
     },
     definitions: {
       style: {
-        label: 'PB.FORM.BLOCKS.CARDS.FIELDS.STYLE',
+        label: 'Cards-style',
         component: {
           type: 'select',
           configuration: {
             dataSet: [
-              {name: 'PB.FORM.BLOCKS.CARDS.FIELDS.STYLE_ONE', value: 'card-1'},
-              {name: 'PB.FORM.BLOCKS.CARDS.FIELDS.STYLE_TWO', value: 'card-2'},
-              {name: 'PB.FORM.BLOCKS.CARDS.FIELDS.STYLE_THREE', value: 'card-3'},
+              {name: 'style-one', value: 'card-1'},
+              {name: 'style-two', value: 'card-2'},
+              {name: 'style-three', value: 'card-3'},
             ]
           }
         }
       },
-      'cards/linkHref': {label: 'PB.FORM.BLOCKS.CARDS.FIELDS.LINK_HREF'},
+      'cards/linkHref': {label: 'Card-link'},
       'cards/style': {
-        label: 'PB.FORM.BLOCKS.CARDS.FIELDS.CARD_STYLE',
+        label: 'Card-style',
         component: {
           type: 'select',
           configuration: {
             dataSet: [
-              {name: 'PB.FORM.BLOCKS.CARDS.FIELDS.CARD_STYLE_PLAIN', value: ''},
-              {name: 'PB.FORM.BLOCKS.CARDS.FIELDS.CARD_STYLE_BORDER', value: 'border'},
-              {name: 'PB.FORM.BLOCKS.CARDS.FIELDS.CARD_STYLE_SHADOW', value: 'shadow'},
+              {name: 'Blank', value: ''},
+              {name: 'Border', value: 'border'},
+              {name: 'Shadow', value: 'shadow'},
             ]
           }
         }
       },
-      'cards/background': {label: 'PB.FORM.BLOCKS.CARDS.FIELDS.BACKGROUND'},
+      'cards/background': {label: 'Card-background'},
       ...COMMON_OPTIONS.definitions
     }
   }

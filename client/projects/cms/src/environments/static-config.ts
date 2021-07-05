@@ -22,7 +22,7 @@ export const STATIC_CONFIG = {
       },
       {
         icon: 'precision_manufacturing',
-        label: 'CATEGORIES',
+        label: 'Categories',
         type: 'link',
         value: '/m/categories'
       },

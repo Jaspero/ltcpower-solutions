@@ -12,13 +12,15 @@ import {BlockLinkDirective} from './directives/block-link/block-link.directive';
 import {InventoryBlockComponent} from '@shared/blocks/blocks/inventory-block/inventory-block.component';
 import { BackgroundHeroBlockComponent } from './blocks/background-hero-block/background-hero-block.component';
 import { FaqBlockComponent } from './blocks/faq-block/faq-block.component';
+import { CardsComponent } from './blocks/cards/cards.component';
 
 export const BLOCKS = {
   content: ContentComponent,
   form: FormComponent,
   inventory: InventoryBlockComponent,
   hero: BackgroundHeroBlockComponent,
-  faq: FaqBlockComponent
+  faq: FaqBlockComponent,
+  card: CardsComponent
 };
 
 const B_COMPONENTS = [
@@ -27,7 +29,8 @@ const B_COMPONENTS = [
   InventoryBlockComponent,
   BackgroundHeroBlockComponent,
   FormComponent,
-  FaqBlockComponent
+  FaqBlockComponent,
+  CardsComponent
 ];
 
 @NgModule({
@@ -36,6 +39,7 @@ const B_COMPONENTS = [
     BlockLinkDirective,
 
     ...B_COMPONENTS,
+      CardsComponent,
   ],
   exports: [
     ...B_COMPONENTS

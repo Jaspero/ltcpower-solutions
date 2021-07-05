@@ -1,0 +1,39 @@
+:host {
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  max-width: 100%;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 4px;
+
+  &.shadow {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  }
+  &.border {
+    border: 1px solid rgba(0,0,0,.16);
+  }
+}
+
+:host(.card-2) {
+  .card {
+    flex-direction: column-reverse;
+  }
+}
+
+:host:not(.card-2) {
+  img {
+    margin-bottom: 15px;
+  }
+}
