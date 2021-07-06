@@ -4,18 +4,17 @@ export const MAP_BLOCK = {
   id: 'map',
   label: 'Map-block',
   icon: 'subject',
-  previewTemplate: `<jms-content [data]="data"></jms-content>`,
+  previewTemplate: `<jms-map-block [data]="data"></jms-map-block>`,
   previewValue: {
-    content: '<h1>Custom Title</h1><h2>Custom Subtitle</h2><p>Custom content</p>',
+    content:
+      '<h1>Custom Title</h1><h2>Custom Subtitle</h2><p>Custom content</p>',
     ...COMMON_OPTIONS.defaults
   },
   form: {
     segments: [
       {
         type: 'empty',
-        fields: [
-          '/link'
-        ],
+        fields: ['/link']
       },
       ...COMMON_OPTIONS.segment
     ],
@@ -27,7 +26,7 @@ export const MAP_BLOCK = {
     },
     definitions: {
       content: {
-        label: 'Link',
+        label: 'Link'
       },
       ...COMMON_OPTIONS.definitions
     }
