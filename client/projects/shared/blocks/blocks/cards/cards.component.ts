@@ -1,6 +1,7 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy, Input, ViewChild, TemplateRef, ElementRef} from '@angular/core';
 import {CommonBlockComponent, CommonOptions} from '@shared/blocks/blocks/common.block';
 import {background} from '@shared/blocks/utils/background';
+import {MatDialog} from '@angular/material/dialog';
 
 interface Card {
   title?: string;
@@ -26,6 +27,17 @@ interface CardOptions extends CommonOptions {
 })
 export class CardsComponent extends CommonBlockComponent {
 
+  constructor(
+    public el: ElementRef,
+    private dialog: MatDialog,
+  ) {super(el); }
+
+  @ViewChild('dialogDescription', {static: false})
+  dialogDescription: TemplateRef<any>;
+
+  fullDescription: string;
+  dialogImage: string;
+
   @Input()
   data: CardOptions;
 
@@ -35,6 +47,15 @@ export class CardsComponent extends CommonBlockComponent {
 
   cardStyle(card: Card) {
     return background(card);
+  }
+
+  viewDescription(member) {
+    this.fullDescription = member.description;
+    this.dialogImage = member.image;
+    this.dialog.open( this.dialogDescription, {
+      width: '600px',
+      height: 'auto'
+    });
   }
 
 }

@@ -8,7 +8,7 @@ export const CARDS = {
   previewValue: {
     cards: [
       {
-        image: 'https://dummyimage.com/300x300/000/fff',
+        image: 'https://firebasestorage.googleapis.com/v0/b/ltcpower.appspot.com/o/members-qSJo-rQQjzFr1ptE2ETPU-profile.png?alt=media&token=e308fbf5-0591-4f5f-9c2f-ba7a8e8dff89',
         title: '<h2 style="text-align:center">Kartica 1</h2>',
         subtitle: '<h3 style="text-align:center">Podnaslov 1</h3>',
         content: '<p style="text-align:center">Sadržaj 1</p>',
@@ -40,7 +40,11 @@ export const CARDS = {
         fields: [
           '/style',
           '/background',
-          '/linkHref'
+          '/linkHref',
+          '/image',
+          '/name',
+          '/role',
+          '/description'
         ]
       },
       {
@@ -59,17 +63,20 @@ export const CARDS = {
           items: {
             type: 'object',
             properties: {
-              image: {type: 'string', default: 'https://dummyimage.com/300x300/000/fff'},
-              title: {type: 'string', default: '<h2>Naslov</h2>'},
-              subtitle: {type: 'string', default: '<h3>Podnaslov</h3>'},
-              content: {type: 'string', default: '<p>Sadržaj</p>'},
-              link: {type: 'string'},
+              image: {type: 'string', default: ' https://firebasestorage.googleapis.com/v0/b/ltcpower.appspot.com/o/members-qSJo-rQQjzFr1ptE2ETPU-profile.png?alt=media&token=e308fbf5-0591-4f5f-9c2f-ba7a8e8dff89'},
+              name: {type: 'string'},
+              role: {type: 'string'},
+              description: {type: 'string'},
               linkHref: {type: 'string'},
               style: {type: 'string'},
               background: {type: 'string'}
             }
           }
         },
+        image: {type: 'string'},
+        name: {type: 'string'},
+        role: {type: 'string'},
+        description: {type: 'string'},
         ...COMMON_OPTIONS.properties
       }
     },
@@ -87,7 +94,16 @@ export const CARDS = {
           }
         }
       },
-      'cards/linkHref': {label: 'Card-link'},
+      image: {
+        label: 'Image',
+        component: {
+          type: 'image'
+        }
+      },
+      name: {label: 'Name'},
+      role: {label: 'Role'},
+      description: {label: 'Description'},
+      'cards/linkHref': {label: 'Link'},
       'cards/style': {
         label: 'Card-style',
         component: {

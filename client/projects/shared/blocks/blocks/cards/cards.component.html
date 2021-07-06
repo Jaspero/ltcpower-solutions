@@ -1,13 +1,29 @@
-<div class="cards">
-  <div class="card" *ngFor="let card of data.cards" [ngClass]="card.style" [ngStyle]="cardStyle(card)" [etBlockLink]="card.linkHref">
-    <div *ngIf="card.image" [fbPbImageIE]="{property: 'image', data: data}">
-      <img [src]="card.image">
-    </div>
 
-    <div>
-      <div class="w-full" *ngIf="card.title" [fbPbSingleLineIE]="{property: 'title', data: data}" [innerHTML]="card.title | jpSanitize"></div>
-      <div class="w-full" *ngIf="card.subtitle" [fbPbSingleLineIE]="{property: 'subtitle', data: data}" [innerHTML]="card.subtitle | jpSanitize"></div>
-      <div class="w-full" *ngIf="card.content" [fbPbSingleLineIE]="{property: 'content', data: data}" [innerHTML]="card.content | jpSanitize"></div>
+<section class="p-y-m">
+  <div class="grid">
+    <div class="col-12 ta-center">
+      <h4 class="c-accent">Our team</h4>
+    </div>
+    <div class="col-3 col-s-6 col-xs-12 m-t-m" *ngFor="let card of data.cards" [ngClass]="card.style" [ngStyle]="cardStyle(card)" (click)="viewDescription(card)">
+      <div class="profile-card flex fd-col ai-center">
+        <div class="profile" [ngStyle]="{'background-image': 'url('+ card.image +')'}">
+        </div>
+        <div class="w-full ta-left p-x-s m-t-xs">
+          <p class="fw-bold m-y-xs name">Name: <span class="fw-normal">{{card.name}}</span></p>
+          <p class="fw-bold name">Role: <span class="fw-normal">{{card.role}}</span></p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+
+<ng-template #dialogDescription>
+  <div class="col-12">
+    <div class="dialog-profile flex jc-center w-full">
+      <div class="dialog-avatar br-circle" [ngStyle]="{'background-image': 'url('+ dialogImage +')'}"></div>
+    </div>
+    <p class="m-t-m">{{fullDescription}}</p>
+  </div>
+</ng-template>
+
