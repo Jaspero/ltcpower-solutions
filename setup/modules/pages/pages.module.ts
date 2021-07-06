@@ -8,6 +8,7 @@ import {INVENTORY_BLOCK} from './blocks/inventory.block';
 import {BACKGROUND_HERO_BLOCK} from './blocks/background-hero-block';
 import {CARDS} from './blocks/cards.block';
 import {FAQ_BLOCK} from './blocks/faq-block';
+import {MAP_BLOCK} from './blocks/map-block';
 
 
 const blocks = [
@@ -17,6 +18,7 @@ const blocks = [
   BACKGROUND_HERO_BLOCK,
   FAQ_BLOCK,
   CARDS,
+  MAP_BLOCK,
 ];
 
 export const PAGES_MODULE = {

@@ -23,7 +23,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    BlocksModule
+    BlocksModule,
   ],
   providers: [
     PageResolver

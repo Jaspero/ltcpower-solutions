@@ -23,7 +23,7 @@ import {CategoriesComponent} from './components/categories/categories.component'
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(ENV_CONFIG.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
   ],
   providers: [
     {

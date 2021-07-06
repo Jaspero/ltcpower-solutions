@@ -13,6 +13,8 @@ import {InventoryBlockComponent} from '@shared/blocks/blocks/inventory-block/inv
 import { BackgroundHeroBlockComponent } from './blocks/background-hero-block/background-hero-block.component';
 import { FaqBlockComponent } from './blocks/faq-block/faq-block.component';
 import { CardsComponent } from './blocks/cards/cards.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MapBlockComponent } from './blocks/map-block/map-block.component';
 
 export const BLOCKS = {
   content: ContentComponent,
@@ -20,7 +22,8 @@ export const BLOCKS = {
   inventory: InventoryBlockComponent,
   hero: BackgroundHeroBlockComponent,
   faq: FaqBlockComponent,
-  cards: CardsComponent
+  cards: CardsComponent,
+  map: MapBlockComponent,
 };
 
 const B_COMPONENTS = [
@@ -30,7 +33,8 @@ const B_COMPONENTS = [
   BackgroundHeroBlockComponent,
   FormComponent,
   FaqBlockComponent,
-  CardsComponent
+  CardsComponent,
+  MapBlockComponent
 ];
 
 @NgModule({
@@ -48,6 +52,7 @@ const B_COMPONENTS = [
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
+    MatDialogModule,
 
     InlineEditorModule,
 

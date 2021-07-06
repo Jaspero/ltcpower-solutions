@@ -32,7 +32,7 @@ export class CardsComponent extends CommonBlockComponent {
     private dialog: MatDialog,
   ) {super(el); }
 
-  @ViewChild('dialogDescription', {static: false})
+  @ViewChild('dialogDescription')
   dialogDescription: TemplateRef<any>;
 
   fullDescription: string;
@@ -49,9 +49,9 @@ export class CardsComponent extends CommonBlockComponent {
     return background(card);
   }
 
-  viewDescription(member) {
-    this.fullDescription = member.description;
-    this.dialogImage = member.image;
+  viewDescription(card) {
+    this.fullDescription = card.description;
+    this.dialogImage = card.image;
     this.dialog.open( this.dialogDescription, {
       width: '600px',
       height: 'auto'
