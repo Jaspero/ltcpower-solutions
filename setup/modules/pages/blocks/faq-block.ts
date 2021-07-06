@@ -4,7 +4,7 @@ export const FAQ_BLOCK = {
   id: 'faq',
   label: 'Faq',
   icon: 'subject',
-  previewTemplate: `<jms-content [data]="data"></jms-content>`,
+  previewTemplate: `<jms-faq-block [data]="data"></jms-faq-block>`,
   previewValue: {
     content: '<h1>Custom Title</h1><h2>Custom Subtitle</h2><p>Custom content</p>',
     ...COMMON_OPTIONS.defaults

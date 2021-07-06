@@ -35,7 +35,7 @@ export const CARDS = {
   form: {
     segments: [
       {
-        title: 'CARDS',
+        title: 'Cards',
         array: '/cards',
         fields: [
           '/style',

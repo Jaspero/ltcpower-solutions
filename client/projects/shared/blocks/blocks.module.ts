@@ -20,7 +20,7 @@ export const BLOCKS = {
   inventory: InventoryBlockComponent,
   hero: BackgroundHeroBlockComponent,
   faq: FaqBlockComponent,
-  card: CardsComponent
+  cards: CardsComponent
 };
 
 const B_COMPONENTS = [
