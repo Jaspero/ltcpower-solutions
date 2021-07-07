@@ -1,9 +1,7 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {CommonBlockComponent, CommonOptions} from '@shared/blocks/blocks/common.block';
 
-interface ContentOptions extends CommonOptions {
-  content: string;
-}
+
 
 @Component({
   selector: 'jms-content',
@@ -16,5 +14,5 @@ interface ContentOptions extends CommonOptions {
 })
 export class ContentComponent extends CommonBlockComponent {
   @Input()
-  data: ContentOptions;
+  data: any;
 }

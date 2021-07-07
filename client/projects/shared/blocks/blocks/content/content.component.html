@@ -1,1 +1,7 @@
-<div class="w-full" [innerHTML]="data.content | jpSanitize"></div>
+<div class="grid p-y-m ai-center">
+  <div class="col-12 ta-center" *ngIf="data.title">
+    <h5>{{data.title}}</h5>
+  </div>
+  <div class="col-12 ta-center description" *ngIf="data.description" [innerHTML]="data.description | jpSanitize"></div>
+</div>
+

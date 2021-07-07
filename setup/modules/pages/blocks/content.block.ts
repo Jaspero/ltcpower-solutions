@@ -14,24 +14,22 @@ export const CONTENT_BLOCK = {
       {
         type: 'empty',
         fields: [
-          '/content'
+          '/title',
+          '/description'
         ],
       },
       ...COMMON_OPTIONS.segment
     ],
     schema: {
       properties: {
-        content: {type: 'string'},
+        title: {type: 'string'},
+        description: {type: 'string'},
         ...COMMON_OPTIONS.properties
       }
     },
     definitions: {
-      content: {
-        label: '',
-        component: {
-          type: 'tinymce'
-        }
-      },
+      title: {label: 'Title'},
+      description: {label: 'Description'},
       ...COMMON_OPTIONS.definitions
     }
   }

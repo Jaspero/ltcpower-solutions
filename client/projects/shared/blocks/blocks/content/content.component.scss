@@ -1,10 +1,35 @@
-:host ::ng-deep {
-  div {
-    padding-right: 12px;
-    padding-left: 12px;
+h5 {
+  font-size: 24px;
+  font-weight: bold;
+}
 
-    *:last-child {
-      margin-bottom: 0;
-    }
+.home-btn {
+  outline: none;
+  border: 1px solid #FF6B18;
+  color:  #FF6B18;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  width: 150px;
+  text-align: center;
+  transition: all .3s ease-in-out;
+  &:hover {
+    background: #FF6B18;
+    color: white;
+  }
+}
+
+.error-title {
+  font-size: 9rem;
+  font-weight: bold;
+}
+
+.main {
+  height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .description {
+    text-align: justify;
   }
 }
