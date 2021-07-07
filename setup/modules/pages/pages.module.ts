@@ -9,6 +9,7 @@ import {BACKGROUND_HERO_BLOCK} from './blocks/background-hero-block';
 import {CARDS} from './blocks/cards.block';
 import {FAQ_BLOCK} from './blocks/faq-block';
 import {MAP_BLOCK} from './blocks/map-block';
+import {COLUMN_BLOCK} from './blocks/three-column-block';
 
 
 const blocks = [
@@ -19,6 +20,7 @@ const blocks = [
   FAQ_BLOCK,
   CARDS,
   MAP_BLOCK,
+  COLUMN_BLOCK
 ];
 
 export const PAGES_MODULE = {

@@ -1,0 +1,11 @@
+<section>
+  <div class="grid p-y-l">
+    <div class="col-4 col-s-12 flex jc-center ai-center" *ngFor="let column of data.columns">
+      <img [src]="column.image" alt="Icon">
+      <div class="wrapper m-l-s">
+        <p class="fw-bold">{{column.title}}</p>
+        <p>{{column.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>
