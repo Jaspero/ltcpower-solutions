@@ -10,6 +10,7 @@ import {CARDS} from './blocks/cards.block';
 import {FAQ_BLOCK} from './blocks/faq-block';
 import {MAP_BLOCK} from './blocks/map-block';
 import {COLUMN_BLOCK} from './blocks/three-column-block';
+import {PRODUCT_BLOCK} from './blocks/product-block';
 
 
 const blocks = [
@@ -20,7 +21,8 @@ const blocks = [
   FAQ_BLOCK,
   CARDS,
   MAP_BLOCK,
-  COLUMN_BLOCK
+  COLUMN_BLOCK,
+  PRODUCT_BLOCK
 ];
 
 export const PAGES_MODULE = {

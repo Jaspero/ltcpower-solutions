@@ -16,6 +16,7 @@ import { CardsComponent } from './blocks/cards/cards.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MapBlockComponent } from './blocks/map-block/map-block.component';
 import { ThreeColumnBlockComponent } from './blocks/three-column-block/three-column-block.component';
+import { ProductBlockComponent } from './blocks/product-block/product-block.component';
 
 export const BLOCKS = {
   content: ContentComponent,
@@ -26,6 +27,7 @@ export const BLOCKS = {
   cards: CardsComponent,
   map: MapBlockComponent,
   columns: ThreeColumnBlockComponent,
+  product: ProductBlockComponent,
 };
 
 const B_COMPONENTS = [
@@ -37,7 +39,8 @@ const B_COMPONENTS = [
   FaqBlockComponent,
   CardsComponent,
   MapBlockComponent,
-  ThreeColumnBlockComponent
+  ThreeColumnBlockComponent,
+  ProductBlockComponent
 ];
 
 @NgModule({
@@ -48,6 +51,7 @@ const B_COMPONENTS = [
     ...B_COMPONENTS,
       CardsComponent,
       ThreeColumnBlockComponent,
+      ProductBlockComponent,
   ],
   exports: [
     ...B_COMPONENTS
