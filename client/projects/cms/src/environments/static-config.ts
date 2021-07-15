@@ -21,16 +21,35 @@ export const STATIC_CONFIG = {
         value: '/m/pages'
       },
       {
-        icon: 'precision_manufacturing',
-        label: 'Categories',
-        type: 'link',
-        value: '/m/categories'
-      },
-      {
-        icon: 'subject',
-        label: 'Sub-categories',
-        type: 'link',
-        value: '/m/subcategories'
+        icon: 'construction',
+        label: 'Products',
+        type: 'expandable',
+        children: [
+          {
+            icon: 'precision_manufacturing',
+            label: 'Categories',
+            type: 'link',
+            value: '/m/categories/overview'
+          },
+          {
+            icon: 'handyman',
+            label: 'Sub categories',
+            type: 'link',
+            value: '/m/subCategories/overview'
+          },
+          {
+            icon: 'arrow_forward',
+            label: 'Products',
+            type: 'link',
+            value: '/m/products/overview'
+          },
+          {
+            icon: 'arrow_forward',
+            label: 'Models',
+            type: 'link',
+            value: '/m/models/overview'
+          },
+        ]
       },
       {
         icon: 'question_answer',

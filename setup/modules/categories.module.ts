@@ -3,79 +3,85 @@ import {CREATED_ON} from './shared/created-on';
 export const CATEGORIES_MODULE = {
   id: 'categories',
   name: 'Categories',
-  description: 'Collection of categories',
+  description: 'Product categories',
   authorization: {
-    read: ['admin'],
     write: ['admin']
   },
   layout: {
-    editTitleKey: 'name',
-    sort: CREATED_ON.sort,
+    order: 6,
+    sort: {
+      active: 'order',
+      direction: 'asc'
+    },
+    sortModule: {
+      sortKey: 'order',
+      sortTitle: 'title'
+    },
     instance: {
       segments: [
         {
-          components: [
-            {
-              selector: 'duplicate'
-            }
-          ]
-        },
-        {
           fields: [
             '/createdOn',
+            '/id',
             '/title',
-            '/image'
           ]
         }
       ]
     },
     table: {
       tableColumns: [
-        CREATED_ON.column(),
+        {
+          key: '/createdOn',
+          label: 'Created On',
+          pipe: ['date'],
+          sortable: true
+        },
         {
           key: '/title',
           label: 'Title'
         },
         {
-          key: '/image',
-          label: 'Image'
-        }
-      ],
-      actions: [
-        {
-          value: `it => '<jms-e-new-prepopulate collection="users" data-name="Prefill Test" data-email="{{it.data.description}}" label="Assign User"></jms-e-new-prepopulate>'`
-        }
+          key: '/id',
+          label: 'URL'
+        },
       ]
     }
   },
   schema: {
     properties: {
+      order: {
+        type: 'number'
+      },
+      id: {
+        type: 'string',
+      },
       title: {
-        type: 'string'
+        type: 'string',
       },
-      image: {
-        type: 'string'
+      createdOn: {
+        type: 'number'
       },
-      ...CREATED_ON.property
-    },
-    required: [
-      'title',
-      'image'
-    ]
+    }
   },
   definitions: {
+    createdOn: {
+      label: 'Created On',
+      formatOnLoad: '(value) => value || Date.now()',
+      component: {
+        type: 'date',
+        configuration: {
+          format: 'number'
+        }
+      }
+    },
+    id: {
+      label: 'URL',
+      disableOn: 'edit',
+      formatOnSave: `(id, item) => id ? id : (item.title || '').replace(/ /g, '-').trim().toLowerCase()`,
+      hint: 'Created from title if left empty.'
+    },
     title: {
       label: 'Title'
     },
-    image: {
-      label: 'Image',
-      component: {
-        type: 'image'
-      }
-    },
-    ...CREATED_ON.definition()
-  },
-  metadata: {
-    autoSave: 0
   }
-};
+}

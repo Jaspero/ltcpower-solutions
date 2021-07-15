@@ -1,79 +1,132 @@
 import {CREATED_ON} from './shared/created-on';
 
-export const SUBCATEGORIES_MODULE = {
-  id: 'subcategories',
-  name: 'Sub-categories',
-  description: 'Collection of sub-categories',
+export const SUBCATEGORIES_MODULE =  {
+  id: 'subCategories',
+  name: 'Sub categories',
+  description: 'Product sub categories',
   authorization: {
-    read: ['admin'],
     write: ['admin']
   },
   layout: {
-    editTitleKey: 'name',
-    sort: CREATED_ON.sort,
+    order: 7,
+    sort: {
+      active: 'order',
+      direction: 'asc'
+    },
+    sortModule: {
+      sortKey: 'order',
+      sortTitle: 'title'
+    },
     instance: {
       segments: [
         {
-          components: [
-            {
-              selector: 'duplicate'
-            }
-          ]
-        },
-        {
           fields: [
+            '/createdOn',
+            '/category',
+            '/featured',
+            '/id',
             '/title',
-            '/image'
+            '/description'
           ]
         }
       ]
     },
     table: {
       tableColumns: [
-        CREATED_ON.column(),
+        {
+          key: '/createdOn',
+          label: 'Created On',
+          pipe: ['date'],
+          sortable: true
+        },
         {
           key: '/title',
           label: 'Title'
         },
         {
-          key: '/image',
-          label: 'Image'
-        }
-      ],
-      actions: [
+          key: '/id',
+          label: 'URL'
+        },
         {
-          value: `it => '<jms-e-new-prepopulate collection="users" data-name="Prefill Test" data-email="{{it.data.description}}" label="Assign User"></jms-e-new-prepopulate>'`
+          key: '/category',
+          label: 'Category'
+        },
+        {
+          key: '/featured',
+          label: 'Featured Image'
         }
       ]
     }
   },
   schema: {
     properties: {
+      order: {
+        type: 'number'
+      },
+      id: {
+        type: 'string',
+      },
       title: {
+        type: 'string',
+      },
+      createdOn: {
+        type: 'number'
+      },
+      featured: {
         type: 'string'
       },
-      image: {
+      category: {
         type: 'string'
       },
-    },
-    required: [
-      'title',
-      'image'
-    ]
+      description: {
+        type: 'string'
+      }
+    }
   },
   definitions: {
-    title: {
-      label: 'Title'
+    createdOn: {
+      label: 'Created On',
+      formatOnLoad: '(value) => value || Date.now()',
+      component: {
+        type: 'date',
+        configuration: {
+          format: 'number'
+        }
+      }
     },
-    image: {
-      label: 'Image',
+    id: {
+      label: 'URL',
+      disableOn: 'edit',
+      formatOnSave: `(id, item) => id ? id : (item.title || '').replace(/ /g, '-').trim().toLowerCase()`,
+      hint: 'Created from title if left empty.'
+    },
+    category: {
+      label: 'Category',
+      component: {
+        type: 'select',
+        configuration: {
+          populate: {
+            collection: 'categories',
+            orderBy: 'order',
+            nameKey: 'title'
+          }
+        }
+      }
+    },
+    description: {
+      label: 'Description',
+      component: {
+        type: 'textarea'
+      }
+    },
+    featured: {
+      label: 'Featured Image',
       component: {
         type: 'image'
       }
     },
-    ...CREATED_ON.definition()
-  },
-  metadata: {
-    autoSave: 0
+    title: {
+      label: 'Title'
+    },
   }
-};
+}

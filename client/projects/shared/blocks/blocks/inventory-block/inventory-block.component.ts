@@ -12,7 +12,7 @@ import {Observable} from 'rxjs';
   styleUrls: ['./inventory-block.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InventoryBlockComponent extends CommonBlockComponent implements OnInit{
+export class InventoryBlockComponent extends CommonBlockComponent implements OnInit {
   constructor(
     public el: ElementRef,
     private afs: AngularFirestore,

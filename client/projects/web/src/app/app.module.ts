@@ -10,14 +10,13 @@ import {ENV_CONFIG} from '../../../../env-config';
 import {USE_EMULATOR as USE_FIRESTORE_EMULATOR} from '@angular/fire/firestore';
 import {USE_EMULATOR as USE_FUNCTIONS_EMULATOR} from '@angular/fire/functions';
 import {environment} from '../environments/environment';
-import {CategoriesComponent} from './components/categories/categories.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CategoriesComponent
   ],
   imports: [
     BrowserModule,

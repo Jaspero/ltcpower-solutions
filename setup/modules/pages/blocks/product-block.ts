@@ -12,54 +12,50 @@ export const PRODUCT_BLOCK = {
   form: {
     segments: [
       {
-        title: 'product',
-        array: '/specifications',
-        type: 'empty',
+        title: 'Product',
+        specifications: 'array',
         fields: [
           '/title',
+          '/image',
           '/label',
           '/value',
-          '/image',
-          '/specTitle',
-          '/productLabel',
-          '/productValue',
-        ],
+          '/specLabel',
+          '/specValue',
+        ]
       },
       ...COMMON_OPTIONS.segment
     ],
     schema: {
       properties: {
-        title: {type: 'string'},
-        label: {type: 'string'},
-        value: {type: 'string'},
-        image: {type: 'string'},
         specifications: {
           type: 'array',
           items: {
             type: 'object',
             properties: {
-              specTitle:    {type: 'string'},
-              productLabel: {type: 'string'},
-              productValue: {type: 'string'},
+              specLabel: {type: 'string'},
+              specValue: {type: 'string'},
             }
           }
         },
+        image: {type: 'string'},
+        title: {type: 'string'},
+        label: {type: 'string'},
+        value: {type: 'string'},
         ...COMMON_OPTIONS.properties
       }
     },
     definitions: {
-      title: {label:'Title'},
       image: {
         label: 'Image',
         component: {
           type: 'image'
         }
       },
-      label: {label: 'Product label'},
-      value: {label: 'Product value'},
-      specTitle: {label: 'Specification Title'},
-      productLabel: {label: 'Specification Label'},
-      productValue: {label: 'Specification Value'},
+      title: {label: 'Title'},
+      label: {label: 'Label'},
+      value: {label: 'Value'},
+      specLabel: {label: 'Test'},
+      specValue: {label: 'TestTwo'},
       ...COMMON_OPTIONS.definitions
     }
   }
