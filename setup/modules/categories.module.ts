@@ -8,14 +8,12 @@ export const CATEGORIES_MODULE = {
     write: ['admin']
   },
   layout: {
-    order: 6,
     sort: {
       active: 'order',
       direction: 'asc'
     },
     sortModule: {
-      sortKey: 'order',
-      sortTitle: 'title'
+      sort: CREATED_ON.sort,
     },
     instance: {
       segments: [
@@ -24,18 +22,14 @@ export const CATEGORIES_MODULE = {
             '/createdOn',
             '/id',
             '/title',
+            '/image',
           ]
         }
       ]
     },
     table: {
       tableColumns: [
-        {
-          key: '/createdOn',
-          label: 'Created On',
-          pipe: ['date'],
-          sortable: true
-        },
+        CREATED_ON.column(),
         {
           key: '/title',
           label: 'Title'
@@ -43,6 +37,10 @@ export const CATEGORIES_MODULE = {
         {
           key: '/id',
           label: 'URL'
+        },
+        {
+          key: '/image',
+          label: 'Image'
         },
       ]
     }
@@ -58,22 +56,13 @@ export const CATEGORIES_MODULE = {
       title: {
         type: 'string',
       },
-      createdOn: {
-        type: 'number'
+      image: {
+        type: 'string',
       },
+      ...CREATED_ON.property
     }
   },
   definitions: {
-    createdOn: {
-      label: 'Created On',
-      formatOnLoad: '(value) => value || Date.now()',
-      component: {
-        type: 'date',
-        configuration: {
-          format: 'number'
-        }
-      }
-    },
     id: {
       label: 'URL',
       disableOn: 'edit',
@@ -83,5 +72,12 @@ export const CATEGORIES_MODULE = {
     title: {
       label: 'Title'
     },
+    image: {
+      label: 'Image',
+      component: {
+        type: 'image'
+      }
+    },
+    ...CREATED_ON.definition()
   }
 }

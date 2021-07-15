@@ -9,38 +9,37 @@ import {CommonBlockComponent} from './blocks/common.block';
 import {ContentComponent} from './blocks/content/content.component';
 import {FormComponent} from './blocks/form/form.component';
 import {BlockLinkDirective} from './directives/block-link/block-link.directive';
-import {InventoryBlockComponent} from '@shared/blocks/blocks/inventory-block/inventory-block.component';
-import { BackgroundHeroBlockComponent } from './blocks/background-hero-block/background-hero-block.component';
-import { FaqBlockComponent } from './blocks/faq-block/faq-block.component';
+import {InventoryComponent} from '@shared/blocks/blocks/inventory/inventory.component';
+import { BackgroundHeroComponent } from './blocks/background-hero/background-hero.component';
+import { FaqComponent } from './blocks/faq/faq.component';
 import { CardsComponent } from './blocks/cards/cards.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { MapBlockComponent } from './blocks/map-block/map-block.component';
-import { ThreeColumnBlockComponent } from './blocks/three-column-block/three-column-block.component';
-import { ProductBlockComponent } from './blocks/product-block/product-block.component';
+import { MapComponent } from './blocks/map/map.component';
+import { ThreeColumnComponent } from './blocks/three-column/three-column.component';
+
 
 export const BLOCKS = {
   content: ContentComponent,
   form: FormComponent,
-  inventory: InventoryBlockComponent,
-  hero: BackgroundHeroBlockComponent,
-  faq: FaqBlockComponent,
+  inventory: InventoryComponent,
+  hero: BackgroundHeroComponent,
+  faq: FaqComponent,
   cards: CardsComponent,
-  map: MapBlockComponent,
-  columns: ThreeColumnBlockComponent,
-  product: ProductBlockComponent,
+  map: MapComponent,
+  columns: ThreeColumnComponent,
 };
 
 const B_COMPONENTS = [
   BlockRendererComponent,
   ContentComponent,
-  InventoryBlockComponent,
-  BackgroundHeroBlockComponent,
+  InventoryComponent,
+  BackgroundHeroComponent,
   FormComponent,
-  FaqBlockComponent,
+  FaqComponent,
   CardsComponent,
-  MapBlockComponent,
-  ThreeColumnBlockComponent,
-  ProductBlockComponent
+  MapComponent,
+  ThreeColumnComponent,
+
 ];
 
 @NgModule({
@@ -50,8 +49,7 @@ const B_COMPONENTS = [
 
     ...B_COMPONENTS,
       CardsComponent,
-      ThreeColumnBlockComponent,
-      ProductBlockComponent,
+      ThreeColumnComponent,
   ],
   exports: [
     ...B_COMPONENTS

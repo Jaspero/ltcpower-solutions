@@ -7,11 +7,11 @@ import {Page} from '../../../../web/src/app/modules/page/page.interface';
 
 @Component({
   selector: 'jms-faq-block',
-  templateUrl: './faq-block.component.html',
-  styleUrls: ['./faq-block.component.scss'],
+  templateUrl: './faq.component.html',
+  styleUrls: ['./faq.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FaqBlockComponent extends CommonBlockComponent implements OnInit{
+export class FaqComponent extends CommonBlockComponent implements OnInit{
 
   constructor(
     public el: ElementRef,

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThreeColumnBlockComponent } from './three-column-block.component';
+import { MapComponent } from './map.component';
 
-describe('ThreeColumnBlockComponent', () => {
-  let component: ThreeColumnBlockComponent;
-  let fixture: ComponentFixture<ThreeColumnBlockComponent>;
+describe('MapBlockComponent', () => {
+  let component: MapComponent;
+  let fixture: ComponentFixture<MapComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThreeColumnBlockComponent ]
+      declarations: [ MapComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ThreeColumnBlockComponent);
+    fixture = TestBed.createComponent(MapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

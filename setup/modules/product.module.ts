@@ -124,7 +124,7 @@ export const PRODUCT_MODULE = {
       }
     },
     categories: {
-      label: 'Category',a
+      label: 'Category',
       component: {
         type: 'select',
         configuration: {

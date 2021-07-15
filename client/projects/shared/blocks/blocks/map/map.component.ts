@@ -4,11 +4,11 @@ import {CommonBlockComponent} from '@shared/blocks/blocks/common.block';
 
 @Component({
   selector: 'jms-map-block',
-  templateUrl: './map-block.component.html',
-  styleUrls: ['./map-block.component.scss'],
+  templateUrl: './map.component.html',
+  styleUrls: ['./map.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MapBlockComponent extends CommonBlockComponent  {
+export class MapComponent extends CommonBlockComponent  {
 
   constructor(
     public el: ElementRef,

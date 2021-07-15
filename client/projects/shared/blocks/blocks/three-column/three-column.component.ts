@@ -15,11 +15,11 @@ interface ColumnOptions extends CommonOptions {
 
 @Component({
   selector: 'jms-three-column-block',
-  templateUrl: './three-column-block.component.html',
-  styleUrls: ['./three-column-block.component.scss'],
+  templateUrl: './three-column.component.html',
+  styleUrls: ['./three-column.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ThreeColumnBlockComponent extends CommonBlockComponent {
+export class ThreeColumnComponent extends CommonBlockComponent {
 
   constructor(
     public el: ElementRef,

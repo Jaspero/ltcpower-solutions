@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MapBlockComponent } from './map-block.component';
+import { FaqComponent } from './faq.component';
 
-describe('MapBlockComponent', () => {
-  let component: MapBlockComponent;
-  let fixture: ComponentFixture<MapBlockComponent>;
+describe('FaqBlockComponent', () => {
+  let component: FaqComponent;
+  let fixture: ComponentFixture<FaqComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MapBlockComponent ]
+      declarations: [ FaqComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MapBlockComponent);
+    fixture = TestBed.createComponent(FaqComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

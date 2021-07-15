@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InventoryBlockComponent } from './inventory-block.component';
+import { BackgroundHeroComponent } from './background-hero.component';
 
-describe('InventoryBlockComponent', () => {
-  let component: InventoryBlockComponent;
-  let fixture: ComponentFixture<InventoryBlockComponent>;
+describe('BackgroundHeroBlockComponent', () => {
+  let component: BackgroundHeroComponent;
+  let fixture: ComponentFixture<BackgroundHeroComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InventoryBlockComponent ]
+      declarations: [ BackgroundHeroComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InventoryBlockComponent);
+    fixture = TestBed.createComponent(BackgroundHeroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
