@@ -82,4 +82,18 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
         tap(console.log)
       );
   }
+
+  selectProduct(product: Product) {
+    this.selectedProduct$.next(product);
+    changeUrlWithoutRefresh([
+      {name: 'category', value: this.selectedCat.value},
+      {name: 'sc', value: this.selectedSubcat.value},
+      ...[{name: 'product', value: product ? product.id : ''}, {name: 'productTitle', value: product ? product.title : ''}]
+    ]);
+
+    if (!product) {
+      this.enabled$.next(true);
+      this.lastId = null;
+    }
+  }
 }
