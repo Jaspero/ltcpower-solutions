@@ -1,14 +1,14 @@
-import {CREATED_ON} from '../shared/created-on';
+
 import {FORMAT_SEARCH} from '../shared/format-search';
 import {META} from '../shared/meta';
 import {CONTENT_BLOCK} from './blocks/content.block';
 import {FORM_BLOCK} from './blocks/form.block';
 import {PROCESSED} from './processed.const';
 import {INVENTORY_BLOCK} from './blocks/inventory.block';
-import {BACKGROUND_HERO_BLOCK} from './blocks/background-hero-block';
+import {BACKGROUND_HERO} from './blocks/background-hero';
 import {CARDS} from './blocks/cards.block';
 import {FAQ_BLOCK} from './blocks/faq-block';
-import {MAP_BLOCK} from './blocks/map-block';
+import {MAP} from './blocks/map';
 import {COLUMN_BLOCK} from './blocks/three-column-block';
 import {PRODUCT_BLOCK} from './blocks/product-block';
 
@@ -17,10 +17,10 @@ const blocks = [
   CONTENT_BLOCK,
   FORM_BLOCK,
   INVENTORY_BLOCK,
-  BACKGROUND_HERO_BLOCK,
+  BACKGROUND_HERO,
   FAQ_BLOCK,
   CARDS,
-  MAP_BLOCK,
+  MAP,
   COLUMN_BLOCK,
   PRODUCT_BLOCK
 ];

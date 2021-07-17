@@ -24,7 +24,7 @@ export const FAQ_MODULE = {
           fields: [
             '/createdOn',
             '/question',
-            '/answer'
+
           ]
         }
       ]
@@ -39,6 +39,18 @@ export const FAQ_MODULE = {
         {
           key: '/answer',
           label: 'Answer'
+        },
+        {
+          key: '/googleMapLink',
+          label: 'Google map link'
+        },
+        {
+          key: '/phoneNumber',
+          label: 'Phone number'
+        },
+        {
+          key: '/email',
+          label: 'Email'
         }
       ],
       actions: [
@@ -56,6 +68,7 @@ export const FAQ_MODULE = {
       answer: {
         type: 'string'
       },
+
       ...CREATED_ON.property
     },
     required: [
@@ -70,6 +83,7 @@ export const FAQ_MODULE = {
     answer: {
       label: 'Answer',
     },
+
     ...CREATED_ON.definition()
   },
   metadata: {

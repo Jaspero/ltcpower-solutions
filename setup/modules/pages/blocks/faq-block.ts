@@ -15,7 +15,12 @@ export const FAQ_BLOCK = {
         type: 'empty',
         fields: [
           '/content',
-          '/title'
+          '/title',
+          '/googleMapLink',
+          '/phoneNumber',
+          '/email',
+          '/address',
+
         ],
       },
       ...COMMON_OPTIONS.segment
@@ -24,6 +29,18 @@ export const FAQ_BLOCK = {
       properties: {
         content: {type: 'string'},
         title: {type: 'string'},
+        googleMapLink: {
+          type: 'string'
+        },
+        phoneNumber: {
+          type: 'string'
+        },
+        email: {
+          type: 'string'
+        },
+        address: {
+          type: 'string'
+        },
         ...COMMON_OPTIONS.properties
       }
     },
@@ -35,6 +52,18 @@ export const FAQ_BLOCK = {
         }
       },
       title: {label:'Title'},
+      googleMapLink: {
+        label: 'Google map link'
+      },
+      phoneNumber: {
+        label: 'Phone number',
+      },
+      email: {
+        label: 'Email',
+      },
+      address: {
+        label: 'Adress',
+      },
       ...COMMON_OPTIONS.definitions
     }
   }

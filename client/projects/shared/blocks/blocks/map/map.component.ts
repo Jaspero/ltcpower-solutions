@@ -2,7 +2,7 @@ import {ChangeDetectionStrategy, Component, ElementRef} from '@angular/core';
 import {CommonBlockComponent} from '@shared/blocks/blocks/common.block';
 
 @Component({
-  selector: 'jms-map-block',
+  selector: 'jms-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
