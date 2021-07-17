@@ -1,7 +1,7 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input, ViewChild, TemplateRef, ElementRef} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, Input, TemplateRef, ViewChild} from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 import {CommonBlockComponent, CommonOptions} from '@shared/blocks/blocks/common.block';
 import {background} from '@shared/blocks/utils/background';
-import {MatDialog} from '@angular/material/dialog';
 
 interface Card {
   title?: string;
