@@ -1,10 +1,10 @@
 import {COMMON_OPTIONS} from './shared';
 
-export const MAP_BLOCK = {
+export const MAP = {
   id: 'map',
   label: 'Map-block',
   icon: 'subject',
-  previewTemplate: `<jms-map-block [data]="data"></jms-map-block>`,
+  previewTemplate: `<jms-map [data]="data"></jms-map>`,
   previewValue: {
     content:
       '<h1>Custom Title</h1><h2>Custom Subtitle</h2><p>Custom content</p>',

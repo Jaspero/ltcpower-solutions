@@ -86,7 +86,12 @@
   }
 }
 
+/* Checkbox
+ *============================================================================*/
 
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background: var(--primary-theme)!important;
+}
 
 /* Toolbar
  *============================================================================*/
