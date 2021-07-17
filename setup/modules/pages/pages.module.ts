@@ -1,17 +1,15 @@
-import {CREATED_ON} from '../shared/created-on';
 import {FORMAT_SEARCH} from '../shared/format-search';
 import {META} from '../shared/meta';
-import {CONTENT_BLOCK} from './blocks/content.block';
-import {FORM_BLOCK} from './blocks/form.block';
-import {PROCESSED} from './processed.const';
-import {INVENTORY_BLOCK} from './blocks/inventory.block';
 import {BACKGROUND_HERO_BLOCK} from './blocks/background-hero-block';
 import {CARDS} from './blocks/cards.block';
+import {CONTENT_BLOCK} from './blocks/content.block';
 import {FAQ_BLOCK} from './blocks/faq-block';
+import {FORM_BLOCK} from './blocks/form.block';
+import {INVENTORY_BLOCK} from './blocks/inventory.block';
 import {MAP_BLOCK} from './blocks/map-block';
-import {COLUMN_BLOCK} from './blocks/three-column-block';
 import {PRODUCT_BLOCK} from './blocks/product-block';
-
+import {COLUMN_BLOCK} from './blocks/three-column-block';
+import {PROCESSED} from './processed.const';
 
 const blocks = [
   CONTENT_BLOCK,
@@ -57,7 +55,6 @@ export const PAGES_MODULE = {
     },
     table: {
       tableColumns: [
-
         {key: '/title', label: 'PB.FORM.TITLE'},
         {key: '/id', label: 'URL'},
         {key: '/featured', label: 'Featured', control: true },

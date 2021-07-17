@@ -1,8 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
-import {Router} from '@angular/router';
 import {Observable} from 'rxjs';
-import {map, tap} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 import {Page} from '../../modules/page/page.interface';
 
 @Component({
@@ -13,8 +12,7 @@ import {Page} from '../../modules/page/page.interface';
 })
 export class HeaderComponent implements OnInit {
   constructor(
-    private afs: AngularFirestore,
-    private router: Router
+    private afs: AngularFirestore
   ) { }
 
   pages$: Observable<Page[]>;

@@ -3,9 +3,10 @@ import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '404',
+    path: 'product',
     loadChildren: () =>
-      import('./modules/not-found/not-found.module').then(m => m.NotFoundModule)
+      import('./modules/product/product.module')
+        .then(a => a.ProductModule)
   },
   {
     path: '',

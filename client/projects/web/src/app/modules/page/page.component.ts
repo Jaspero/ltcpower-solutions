@@ -5,7 +5,7 @@ import {map, tap} from 'rxjs/operators';
 import {Page} from './page.interface';
 
 @Component({
-  selector: 'jms-w-page',
+  selector: 'ltc-page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

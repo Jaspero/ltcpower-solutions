@@ -5,9 +5,9 @@ import {ActivatedRouteSnapshot, Resolve, Router} from '@angular/router';
 import {snapshotMap} from '@shared/utils/snapshot-map.operator';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-import {BASE_TITLE} from '../../consts/base-title.const';
+import {BASE_TITLE} from '../consts/base-title.const';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class PageResolver implements Resolve<any> {
   constructor(
     private title: Title,

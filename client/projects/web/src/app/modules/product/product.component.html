@@ -1,0 +1,47 @@
+<section>
+  <div class="grid p-y-l">
+
+    <div class="col-6 col-s-12 ta-center">
+      <img [src]="page.featured" alt="Model Image" class="b-a product-image">
+    </div>
+
+    <div class="col-6 col-s-12">
+      <h2 class="title c-primary">
+        <button class="back-btn m-r-xs" (click)="back()">
+          <img src="assets/icons/back.svg" alt="Back Arrow">
+        </button>
+        {{page.title}}
+      </h2>
+      <div class="product-info m-y-s" *ngFor="let spec of page.primarySpecs">
+        <p>{{spec.label}}</p>
+        <h5>{{spec.value}}</h5>
+      </div>
+    </div>
+
+    <div class="col-12 ta-left m-t-l">
+      <h1 class="title c-accent">Specifications</h1>
+    </div>
+
+    <div class="col-12">
+      <div class="accordion flex ai-center fw-wrap jc-between b-b p-y-s" *ngFor="let spec of page.specifications;" [class.active-accordion]="spec.active">
+        <div class="flex w-full jc-between ai-center" (click)="spec.active = !spec.active">
+          <h4 class="c-accent accordion-title" [class.active-accordion]="spec.active">{{spec.label}}</h4>
+          <img src="assets/icons/down-arrow.svg" alt="Arrow" [class.active-accordion]="spec.active" [class.close-accordion]="!spec.active"  class="arrow m-r-xs">
+        </div>
+
+        <div class="accordion-content" [class.active-accordion]="spec.active">
+          <table>
+            <tbody>
+              <tr *ngFor="let item of spec.values">
+                <td class="fw-bold">{{item.label}}</td>
+                <td class="jc-start value">{{item.value}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<jms-block-renderer *ngIf="page.blocks" [blocks]="page.blocks"></jms-block-renderer>

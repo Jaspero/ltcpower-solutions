@@ -1,30 +1,23 @@
-import {CREATED_ON} from './shared/created-on';
+import {FORMAT_SEARCH} from './shared/format-search';
+import {META} from './shared/meta';
+import {ORDER} from './shared/order';
 
 export const PRODUCT_MODULE = {
   id: 'products',
   name: 'Product',
-  description: 'Collection of products',
   authorization: {
-    read: ['admin'],
     write: ['admin']
   },
   layout: {
-    editTitleKey: 'name',
-    sort: CREATED_ON.sort,
+    editTitleKey: 'title',
+    ...ORDER,
     instance: {
       segments: [
         {
-          components: [
-            {
-              selector: 'duplicate'
-            }
-          ]
-        },
-        {
+          title: 'General',
           fields: [
             '/id',
             '/title',
-            '/createdOn',
             '/categories',
             '/subCategory',
             '/featured',
@@ -35,74 +28,22 @@ export const PRODUCT_MODULE = {
     },
     table: {
       tableColumns: [
-        CREATED_ON.column(),
-        {
-          key: '/title',
-          label: 'Title'
-        },
-        {
-          key: '/id',
-          label: 'URL'
-        },
-        {
-          key: '/categories',
-          label: 'Category'
-        },
-        {
-          key: '/subCategory',
-          label: 'Sub category'
-        },
-      ],
-      actions: [
-        {
-          value: `it => '<jms-e-new-prepopulate collection="users" data-name="Prefill Test" data-email="{{it.data.description}}" label="Assign User"></jms-e-new-prepopulate>'`
-        }
+        {key: '/title', label: 'Title'},
+        {key: '/id', label: 'URL'},
+        {key: '/categories', label: 'Category'},
+        {key: '/subCategory', label: 'Sub category'},
       ]
     }
   },
   schema: {
     properties: {
-      order: {
-        type: 'number'
-      },
-      id: {
-        type: 'string',
-      },
-      title: {
-        type: 'string',
-      },
-      createdOn: {
-        type: 'number'
-      },
-      categories: {
-        type: 'string'
-      },
-      subCategory: {
-        type: 'string'
-      },
-      featured: {
-        type: 'string'
-      },
-      excerpt: {
-        type: 'string'
-      },
-      meta: {
-        type: 'object',
-        properties: {
-          structured: {
-            type: 'string'
-          },
-          description: {
-            type: 'string'
-          },
-          title: {
-            type: 'string'
-          },
-          keywords: {
-            type: 'string'
-          }
-        }
-      },
+      id: {type: 'string',},
+      title: {type: 'string',},
+      categories: {type: 'string'},
+      subCategory: {type: 'string'},
+      featured: {type: 'string'},
+      excerpt: {type: 'string'},
+      ...ORDER.property,
     },
     required: [
       'title',
@@ -139,7 +80,7 @@ export const PRODUCT_MODULE = {
     id: {
       label: 'URL',
       disableOn: 'edit',
-      formatOnSave: `(id, item) => id ? id : (item.title || '').replace(/ /g, '-').trim().toLowerCase()`,
+      formatOnSave: FORMAT_SEARCH(),
       hint: 'Created from title if left empty.'
     },
     featured: {
@@ -154,12 +95,7 @@ export const PRODUCT_MODULE = {
         type: 'textarea'
       }
     },
-    title: {
-      label: 'Title'
-    },
-    ...CREATED_ON.definition()
-  },
-  metadata: {
-    autoSave: 0
+    title: {label: 'Title'},
+    ...META.definitions()
   }
-}
+};

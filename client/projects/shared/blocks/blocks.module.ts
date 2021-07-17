@@ -1,22 +1,23 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
 import {RouterModule} from '@angular/router';
 import {InlineEditorModule} from '@jaspero/fb-page-builder';
 import {LoadClickModule, SanitizeModule} from '@jaspero/ng-helpers';
+import {ProductCardComponent} from '@shared/blocks/blocks/inventory/components/product-card/product-card.component';
+import {SubCategoriesCardComponent} from '@shared/blocks/blocks/inventory/components/sub-categories-card/sub-categories-card.component';
+import {InventoryComponent} from '@shared/blocks/blocks/inventory/inventory.component';
 import {BlockRendererComponent} from './block-renderer/block-renderer.component';
+import {BackgroundHeroComponent} from './blocks/background-hero/background-hero.component';
+import {CardsComponent} from './blocks/cards/cards.component';
 import {CommonBlockComponent} from './blocks/common.block';
 import {ContentComponent} from './blocks/content/content.component';
+import {FaqComponent} from './blocks/faq/faq.component';
 import {FormComponent} from './blocks/form/form.component';
+import {MapComponent} from './blocks/map/map.component';
+import {ThreeColumnComponent} from './blocks/three-column/three-column.component';
 import {BlockLinkDirective} from './directives/block-link/block-link.directive';
-import {InventoryComponent} from '@shared/blocks/blocks/inventory/inventory.component';
-import { BackgroundHeroComponent } from './blocks/background-hero/background-hero.component';
-import { FaqComponent } from './blocks/faq/faq.component';
-import { CardsComponent } from './blocks/cards/cards.component';
-import {MatDialogModule} from '@angular/material/dialog';
-import { MapComponent } from './blocks/map/map.component';
-import { ThreeColumnComponent } from './blocks/three-column/three-column.component';
-
 
 export const BLOCKS = {
   content: ContentComponent,
@@ -39,17 +40,18 @@ const B_COMPONENTS = [
   CardsComponent,
   MapComponent,
   ThreeColumnComponent,
-
 ];
 
 @NgModule({
   declarations: [
     CommonBlockComponent,
+
     BlockLinkDirective,
 
-    ...B_COMPONENTS,
-      CardsComponent,
-      ThreeColumnComponent,
+    ProductCardComponent,
+    SubCategoriesCardComponent,
+
+  ...B_COMPONENTS,
   ],
   exports: [
     ...B_COMPONENTS

@@ -29,25 +29,25 @@ export const STATIC_CONFIG = {
             icon: 'precision_manufacturing',
             label: 'Categories',
             type: 'link',
-            value: '/m/categories/overview'
+            value: '/m/categories'
           },
           {
             icon: 'handyman',
             label: 'Sub categories',
             type: 'link',
-            value: '/m/subCategories/overview'
+            value: '/m/subCategories'
           },
           {
             icon: 'arrow_forward',
             label: 'Products',
             type: 'link',
-            value: '/m/products/overview'
+            value: '/m/products'
           },
           {
             icon: 'arrow_forward',
             label: 'Models',
             type: 'link',
-            value: '/m/models/overview'
+            value: '/m/models'
           },
         ]
       },
@@ -64,6 +64,12 @@ export const STATIC_CONFIG = {
             label: 'GENERAL.USERS',
             type: 'link',
             value: '/m/users'
+          },
+          {
+            icon: 'send',
+            label: 'LAYOUT.INVITES',
+            type: 'link',
+            value: '/m/user-invites'
           },
           {
             icon: 'vpn_key',
@@ -86,25 +92,6 @@ export const STATIC_CONFIG = {
         ],
         icon: 'account_box',
         label: 'LAYOUT.MANAGEMENT',
-        type: 'expandable'
-      },
-      {
-        children: [
-          {
-            icon: 'view_module',
-            label: 'LAYOUT.MODULES',
-            type: 'link',
-            value: '/module-definition/overview'
-          },
-          {
-            icon: 'send',
-            label: 'LAYOUT.INVITES',
-            type: 'link',
-            value: '/m/user-invites'
-          }
-        ],
-        icon: 'dns',
-        label: 'LAYOUT.SYSTEM',
         type: 'expandable'
       }
     ] as NavigationItemWithActive[]

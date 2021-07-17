@@ -1,29 +1,21 @@
-import {CREATED_ON} from './shared/created-on';
+import {FORMAT_SEARCH} from './shared/format-search';
+import {META} from './shared/meta';
+import {ORDER} from './shared/order';
 
 export const MODELS_MODULE = {
   id: 'models',
   name: 'Models',
-  description: 'Different models of a product',
   authorization: {
-    write: ['admin'],
-    read: ['admin']
+    write: ['admin']
   },
   layout: {
-    order: 8,
-    sort: {
-      active: 'title',
-      direction: 'asc'
-    },
-    sortModule: {
-      sortKey: 'order',
-      sortTitle: 'title'
-    },
+    editTitleKey: 'title',
+    ...ORDER.layout(),
     instance: {
       segments: [
         {
           title: 'General',
           fields: [
-            '/createdOn',
             '/id',
             '/product',
             '/title',
@@ -53,74 +45,38 @@ export const MODELS_MODULE = {
               '/value'
             ]
           }]
-        }
+        },
+        ...META.segment()
       ]
     },
     table: {
       tableColumns: [
-        {
-          key: '/createdOn',
-          label: 'Created On',
-          pipe: ['date'],
-          sortable: true
-        },
-        {
-          key: '/product',
-          label: 'Product'
-        },
-        {
-          key: '/title',
-          label: 'Title'
-        },
-        {
-          key: '/id',
-          label: 'URL'
-        }
+        {key: '/product', label: 'Product'},
+        {key: '/title', label: 'Title'},
+        {key: '/id', label: 'URL'}
       ]
     }
   },
   schema: {
     properties: {
-      order: {
-        type: 'number'
-      },
-      id: {
-        type: 'string',
-      },
-      title: {
-        type: 'string',
-      },
-      excerpt: {
-        type: 'string'
-      },
-      featured: {
-        type: 'string'
-      },
-      createdOn: {
-        type: 'number'
-      },
-      product: {
-        type: 'string'
-      },
+      id: {type: 'string',},
+      title: {type: 'string',},
+      excerpt: {type: 'string'},
+      featured: {type: 'string'},
+      product: {type: 'string'},
       specifications: {
         type: 'array',
         items: {
           type: 'object',
           properties: {
-            label: {
-              type: 'string'
-            },
+            label: {type: 'string'},
             values: {
               type: 'array',
               items: {
                 type: 'object',
                 properties: {
-                  label: {
-                    type: 'string'
-                  },
-                  value: {
-                    type: 'string'
-                  }
+                  label: {type: 'string'},
+                  value: {type: 'string'}
                 }
               }
             }
@@ -132,28 +88,16 @@ export const MODELS_MODULE = {
         items: {
           type: 'object',
           properties: {
-            label: {
-              type: 'string'
-            },
-            value: {
-              type: 'string'
-            }
+            label: {type: 'string'},
+            value: {type: 'string'}
           }
         }
-      }
+      },
+      ...ORDER.property,
+      ...META.property(),
     }
   },
   definitions: {
-    createdOn: {
-      label: 'Created On',
-      formatOnLoad: '(value) => value || Date.now()',
-      component: {
-        type: 'date',
-        configuration: {
-          format: 'number'
-        }
-      }
-    },
     product: {
       label: 'Product',
       component: {
@@ -170,12 +114,10 @@ export const MODELS_MODULE = {
     id: {
       label: 'URL',
       disableOn: 'edit',
-      formatOnSave: `(id, item) => id ? id : (item.title || '').replace(/ /g, '-').trim().toLowerCase()`,
+      formatOnSave: FORMAT_SEARCH(),
       hint: 'Created from title if left empty.'
     },
-    title: {
-      label: 'Title'
-    },
+    title: {label: 'Title'},
     excerpt: {
       label: 'Excerpt',
       component: {
@@ -211,5 +153,6 @@ export const MODELS_MODULE = {
       columnsDesktop: 6,
       columnsMobile: 12
     },
+    ...META.definitions()
   }
-}
+};

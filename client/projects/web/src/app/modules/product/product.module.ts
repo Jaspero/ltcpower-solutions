@@ -3,27 +3,25 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {BlocksModule} from '@shared/blocks/blocks.module';
 import {PageResolver} from '../../resolvers/page.resolver';
-import {PageComponent} from './page.component';
+import {ProductComponent} from './product.component';
 
-const routes: Routes = [
-  {
-    path: ':id',
-    component: PageComponent,
-    resolve: {
-      page: PageResolver
-    },
-    data: {
-      collection: 'pages'
-    }
+const routes: Routes = [{
+  path: ':id',
+  component: ProductComponent,
+  resolve: {
+    page: PageResolver
+  },
+  data: {
+    collection: 'models'
   }
-];
+}];
 
 @NgModule({
-  declarations: [PageComponent],
+  declarations: [ProductComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     BlocksModule,
   ]
 })
-export class PageModule { }
+export class ProductModule { }
