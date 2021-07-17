@@ -1,7 +1,5 @@
-import {Component, OnInit, ChangeDetectionStrategy, ElementRef, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, Input} from '@angular/core';
 import {CommonBlockComponent, CommonOptions} from '@shared/blocks/blocks/common.block';
-import {Observable} from 'rxjs';
-
 
 interface Column {
   title?: string;
@@ -20,13 +18,12 @@ interface ColumnOptions extends CommonOptions {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThreeColumnComponent extends CommonBlockComponent {
-
   constructor(
     public el: ElementRef,
-  ) {super(el); }
+  ) {
+    super(el);
+  }
 
   @Input()
   data: ColumnOptions;
-
-
 }

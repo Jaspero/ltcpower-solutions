@@ -1,5 +1,4 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {CommonBlockComponent} from '@shared/blocks/blocks/common.block';
 
 @Component({

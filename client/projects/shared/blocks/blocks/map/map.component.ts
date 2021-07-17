@@ -1,6 +1,5 @@
-import {Component, OnInit, ChangeDetectionStrategy, ElementRef} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef} from '@angular/core';
 import {CommonBlockComponent} from '@shared/blocks/blocks/common.block';
-
 
 @Component({
   selector: 'jms-map-block',

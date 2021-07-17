@@ -1,11 +1,11 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input, ElementRef} from '@angular/core';
-import {CommonBlockComponent, CommonOptions} from '@shared/blocks/blocks/common.block';
+import {ChangeDetectionStrategy, Component, ElementRef, Input, OnInit} from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
-import {ActivatedRoute} from '@angular/router';
-import {map, takeUntil, tap} from 'rxjs/operators';
-import {Page} from '../../../../web/src/app/modules/page/page.interface';
-import {BehaviorSubject, Observable} from 'rxjs';
 import {FormControl} from '@angular/forms';
+import {ActivatedRoute} from '@angular/router';
+import {CommonBlockComponent} from '@shared/blocks/blocks/common.block';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {map, tap} from 'rxjs/operators';
+import {Page} from '../../../../web/src/app/modules/page/page.interface';
 
 @Component({
   selector: 'jms-inventory-block',
@@ -81,19 +81,5 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
         ),
         tap(console.log)
       );
-  }
-
-  selectProduct(product: Product) {
-    this.selectedProduct$.next(product);
-    changeUrlWithoutRefresh([
-      {name: 'category', value: this.selectedCat.value},
-      {name: 'sc', value: this.selectedSubcat.value},
-      ...[{name: 'product', value: product ? product.id : ''}, {name: 'productTitle', value: product ? product.title : ''}]
-    ]);
-
-    if (!product) {
-      this.enabled$.next(true);
-      this.lastId = null;
-    }
   }
 }

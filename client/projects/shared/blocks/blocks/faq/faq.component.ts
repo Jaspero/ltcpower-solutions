@@ -11,12 +11,13 @@ import {Page} from '../../../../web/src/app/modules/page/page.interface';
   styleUrls: ['./faq.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FaqComponent extends CommonBlockComponent implements OnInit{
-
+export class FaqComponent extends CommonBlockComponent implements OnInit {
   constructor(
     public el: ElementRef,
     private afs: AngularFirestore
-  ) {super(el); }
+  ) {
+    super(el);
+  }
 
   @Input()
   data: any;

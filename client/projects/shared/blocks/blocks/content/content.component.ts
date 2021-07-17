@@ -1,7 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
-import {CommonBlockComponent, CommonOptions} from '@shared/blocks/blocks/common.block';
-
-
+import {CommonBlockComponent} from '@shared/blocks/blocks/common.block';
 
 @Component({
   selector: 'jms-content',
