@@ -50,7 +50,8 @@
     "DESCRIPTION": "Description",
     "ACTIVE": "Active",
 
-    "YES": "Yes"
+    "YES": "Yes",
+    "GENERAL": "General"
   },
   "LOGIN": {
     "LOGIN": "Login",
@@ -112,17 +113,8 @@
     "USERS": "Users",
     "USERS_DESCRIPTION": "App Users",
     "AUTOMATIC_EMAILS": "Automatic Emails",
-    "AUTOMATIC_EMAILS_DESCRIPTION": "Automatic Email configuration",
     "SENT_EMAILS": "Sent Emails",
-    "NO_MODULES": "No modules yet.",
-    "COPIED_TO_CLIPBOARD": "Copied to clipboard",
-    "LAYOUT_SETTINGS": "Layout Settings",
-    "ROLES": "Roles",
-    "ROLES_DESCRIPTION": "Collection of roles that can be assigned to users",
-    "USER_INVITES": "Invites",
-    "USER_INVITES_DESCRIPTION": "Invites sent to new users",
-    "USERS": "Users",
-    "USERS_DESCRIPTION": "App Users",
+    "FORMS": "Forms",
     "PAGES": "Pages"
   },
   "INSTANCE_OVERVIEW": {
@@ -303,7 +295,8 @@
           "VERTICAL_ALIGNMENT": "Vertical Align",
           "VERTICAL_ALIGNMENT_CENTER": "Center",
           "VERTICAL_ALIGNMENT_TOP": "Top",
-          "VERTICAL_ALIGNMENT_BOTTOM": "Bottom"
+          "VERTICAL_ALIGNMENT_BOTTOM": "Bottom",
+          "ADDITIONAL_STYLE": "Custom Style"
         },
         "CONTENT": {
           "TITLE": "Content"
@@ -311,7 +304,7 @@
         "FORM": {
           "TITLE": "Form",
           "FIELDS": {
-            "ACTION": "Action"
+            "FORM": "Form"
           }
         }
       }
@@ -364,5 +357,8 @@
     "MODULES": "Modules",
     "DOCUMENTS": "Documents",
     "ACTIONS": "Actions"
+  },
+  "TEMPLATE_EDITOR": {
+    "ADD_SEGMENT": "Add Segment"
   }
 }
