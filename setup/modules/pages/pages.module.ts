@@ -34,21 +34,23 @@ export const PAGES_MODULE = {
     instance: {
       segments: [
         {
+          title: 'GENERAL.GENERAL',
           type: 'card',
           fields: [
             '/id',
             '/title',
             '/featured',
             '/order'
-          ]
+          ],
+          columnsDesktop: 6
         },
+        META.segment({columnsDesktop: 6}),
         {
           type: 'empty',
           fields: [
             '/blocks'
           ]
-        },
-        META.segment()
+        }
       ]
     },
     table: {
