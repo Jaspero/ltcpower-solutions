@@ -2,7 +2,7 @@ import {COMMON_OPTIONS} from './shared';
 
 export const MAP = {
   id: 'map',
-  label: 'Map-block',
+  label: 'Map',
   icon: 'subject',
   previewTemplate: `<jms-map [data]="data"></jms-map>`,
   previewValue: {

@@ -16,20 +16,23 @@ export const MODELS_MODULE = {
         {
           title: 'General',
           fields: [
+            '/title',
             '/id',
             '/product',
-            '/title',
             '/excerpt',
             '/featured'
-          ]
+          ],
+          columnsDesktop: 6
         },
+        META.segment({columnsDesktop: 6}),
         {
           title: 'Primary Specifications',
           array: '/primarySpecs',
           fields: [
             '/label',
             '/value'
-          ]
+          ],
+          columnsDesktop: 6
         },
         {
           title: 'Specifications',
@@ -44,9 +47,9 @@ export const MODELS_MODULE = {
               '/label',
               '/value'
             ]
-          }]
-        },
-        ...META.segment()
+          }],
+          columnsDesktop: 6
+        }
       ]
     },
     table: {
@@ -115,9 +118,10 @@ export const MODELS_MODULE = {
       label: 'URL',
       disableOn: 'edit',
       formatOnSave: FORMAT_SEARCH(),
-      hint: 'Created from title if left empty.'
+      hint: 'Created from title if left empty.',
+      columnsDesktop: 6
     },
-    title: {label: 'Title'},
+    title: {label: 'Title', columnsDesktop: 6},
     excerpt: {
       label: 'Excerpt',
       component: {

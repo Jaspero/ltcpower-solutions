@@ -13,7 +13,6 @@ import {CommonBlockComponent, CommonOptions} from '../common.block';
 
 interface InventoryOptions extends CommonOptions {
   title: string;
-  page: number;
   loadMore: boolean;
   categories: boolean;
   subCategories: boolean;
@@ -48,6 +47,7 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
   selectedCat: FormControl;
   selectedSubcat: FormControl;
 
+  page = 0;
   lastId: DocumentSnapshot<Product>;
 
   ngOnInit() {
@@ -186,17 +186,17 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
                       final = final.startAfter(this.lastId);
                     }
 
-                    return final.limit(this.data.page + 1);
+                    return final.limit(this.page + 1);
                   }
                 )
                   .get()
               ),
               map(data => {
-                if (data.docs.length !== (this.data.page + 1)) {
+                if (data.docs.length !== (this.page + 1)) {
                   this.enabled$.next(false);
                 }
 
-                const items = data.docs.slice(0, this.data.page);
+                const items = data.docs.slice(0, this.page);
 
                 this.lastId = items[items.length - 1] as DocumentSnapshot<Product>;
 
@@ -238,17 +238,17 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
                       final = final.startAfter(this.lastId);
                     }
 
-                    return final.limit(this.data.page + 1);
+                    return final.limit(this.page + 1);
                   }
                 )
                   .get()
               ),
               map(data => {
-                if (data.docs.length !== (this.data.page + 1)) {
+                if (data.docs.length !== (this.page + 1)) {
                   this.enabled$.next(false);
                 }
 
-                const items = data.docs.slice(0, this.data.page);
+                const items = data.docs.slice(0, this.page);
 
                 this.lastId = items[items.length - 1] as DocumentSnapshot<Product>;
 

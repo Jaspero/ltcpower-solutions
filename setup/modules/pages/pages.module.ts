@@ -1,5 +1,6 @@
 import {FORMAT_SEARCH} from '../shared/format-search';
 import {META} from '../shared/meta';
+import {ORDER} from '../shared/order';
 import {BACKGROUND_HERO} from './blocks/background-hero';
 import {CARDS} from './blocks/cards.block';
 import {CONTENT_BLOCK} from './blocks/content.block';
@@ -31,6 +32,7 @@ export const PAGES_MODULE = {
   },
   layout: {
     editTitleKey: 'title',
+    ...ORDER.layout(),
     instance: {
       segments: [
         {
@@ -40,7 +42,6 @@ export const PAGES_MODULE = {
             '/id',
             '/title',
             '/featured',
-            '/order'
           ],
           columnsDesktop: 6
         },
@@ -69,8 +70,8 @@ export const PAGES_MODULE = {
       order: {type: 'number'},
       blocks: {type: 'array'},
       ...META.property(),
-    },
-    required: ['order']
+      ...ORDER.property
+    }
   },
   definitions: {
     id: {
@@ -81,7 +82,6 @@ export const PAGES_MODULE = {
     },
     title: {label: 'Title'},
     featured: {label: 'Featured'},
-    order: {label: 'Order'},
     blocks: {
       component: {
         type: 'pb-blocks',

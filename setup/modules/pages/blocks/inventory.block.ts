@@ -6,7 +6,10 @@ export const INVENTORY_BLOCK = {
   icon: 'subject',
   previewTemplate: `<jms-inventory-block [data]="data"></jms-inventory-block>`,
   previewValue: {
-    content: '<h1>Custom Title</h1><h2>Custom Subtitle</h2><p>Custom content</p>',
+    categories: true,
+    subCategories: true,
+    loadMore: true,
+    title: 'Our Rental Equipment',
     ...COMMON_OPTIONS.defaults
   },
   form: {
@@ -14,27 +17,28 @@ export const INVENTORY_BLOCK = {
       {
         type: 'empty',
         fields: [
-          '/content',
-          '/title'
+          '/title',
+          '/categories',
+          '/subCategories',
+          '/loadMore'
         ],
       },
       ...COMMON_OPTIONS.segment
     ],
     schema: {
       properties: {
-        content: {type: 'string'},
         title: {type: 'string'},
+        categories: {type: 'boolean'},
+        subCategories: {type: 'boolean'},
+        loadMore: {type: 'boolean'},
         ...COMMON_OPTIONS.properties
       }
     },
     definitions: {
-      content: {
-        label: '',
-        component: {
-          type: 'tinymce'
-        }
-      },
       title: {label:'Title'},
+      categories: {label: 'Categories'},
+      subCategories: {label: 'Subcategories'},
+      loadMore: {label: 'Load More'},
       ...COMMON_OPTIONS.definitions
     }
   }

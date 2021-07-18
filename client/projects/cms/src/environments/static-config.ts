@@ -10,19 +10,19 @@ export const STATIC_CONFIG = {
     items: [
       {
         icon: 'dashboard',
-        label: 'DASHBOARD',
+        label: 'Dashboard',
         type: 'link',
         value: '/dashboard'
       },
       {
         icon: 'web',
-        label: 'PAGES',
+        label: 'Pages',
         type: 'link',
         value: '/m/pages'
       },
       {
         icon: 'construction',
-        label: 'Products',
+        label: 'Inventory',
         type: 'expandable',
         children: [
           {
@@ -38,13 +38,13 @@ export const STATIC_CONFIG = {
             value: '/m/subCategories'
           },
           {
-            icon: 'arrow_forward',
+            icon: 'construction',
             label: 'Products',
             type: 'link',
             value: '/m/products'
           },
           {
-            icon: 'arrow_forward',
+            icon: 'build',
             label: 'Models',
             type: 'link',
             value: '/m/models'
