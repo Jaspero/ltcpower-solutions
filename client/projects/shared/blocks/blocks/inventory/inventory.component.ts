@@ -164,7 +164,7 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
                   ref => {
 
                     let final: any = ref
-                      .orderBy('order', 'asc');
+                      // .orderBy('order', 'asc');
 
                     if (category) {
                       final = final.where(
@@ -224,7 +224,7 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
                   ref => {
 
                     let final: any = ref
-                      .orderBy('order', 'asc');
+                      // .orderBy('order', 'asc');
 
                     if (category) {
                       final = final.where(

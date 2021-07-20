@@ -284,7 +284,10 @@
                   "replace": "projects/web/src/environments/environment.ts",
                   "with": "projects/web/src/environments/environment.live.ts"
                 }
-              ]
+              ],
+              "extractLicenses": false,
+              "optimization": false,
+              "buildOptimizer": false
             }
           }
         },
