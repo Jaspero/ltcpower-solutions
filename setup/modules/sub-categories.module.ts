@@ -3,7 +3,7 @@ import {ORDER} from './shared/order';
 
 export const SUBCATEGORIES_MODULE =  {
   id: 'subCategories',
-  name: 'Sub categories',
+  name: 'Categories',
   authorization: {
     write: ['admin']
   },
@@ -65,18 +65,12 @@ export const SUBCATEGORIES_MODULE =  {
     },
     description: {
       label: 'Description',
-      component: {
-        type: 'textarea'
-      }
+      component: {type: 'textarea'}
     },
     featured: {
       label: 'Featured Image',
-      component: {
-        type: 'image'
-      }
+      component: {type: 'image'}
     },
-    title: {
-      label: 'Title'
-    },
+    title: {label: 'Title'},
   }
 };

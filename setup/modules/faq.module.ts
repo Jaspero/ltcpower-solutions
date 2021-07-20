@@ -1,75 +1,32 @@
-import {CREATED_ON} from './shared/created-on';
+import {ORDER} from './shared/order';
 
 export const FAQ_MODULE = {
   id: 'faq',
   name: 'Faq',
   description: 'Faq collection',
-  authorization: {
-    read: ['admin'],
-    write: ['admin']
-  },
   layout: {
     editTitleKey: 'name',
-    sort: CREATED_ON.sort,
+    ...ORDER.layout('question'),
     instance: {
-      segments: [
-        {
-          components: [
-            {
-              selector: 'duplicate'
-            }
-          ]
-        },
-        {
-          fields: [
-            '/createdOn',
-            '/question',
-
-          ]
-        }
-      ]
+      segments: [{
+        fields: [
+          '/createdOn',
+          '/question',
+        ]
+      }]
     },
     table: {
       tableColumns: [
-        CREATED_ON.column(),
-        {
-          key: '/question',
-          label: 'Question'
-        },
-        {
-          key: '/answer',
-          label: 'Answer'
-        },
-        {
-          key: '/googleMapLink',
-          label: 'Google map link'
-        },
-        {
-          key: '/phoneNumber',
-          label: 'Phone number'
-        },
-        {
-          key: '/email',
-          label: 'Email'
-        }
-      ],
-      actions: [
-        {
-          value: `it => '<jms-e-new-prepopulate collection="users" data-name="Prefill Test" data-email="{{it.data.description}}" label="Assign User"></jms-e-new-prepopulate>'`
-        }
+        {key: '/question', label: 'Question'},
+        {key: '/answer', label: 'Answer'}
       ]
     }
   },
   schema: {
     properties: {
-      question: {
-        type: 'string'
-      },
-      answer: {
-        type: 'string'
-      },
-
-      ...CREATED_ON.property
+      question: {type: 'string'},
+      answer: {type: 'string'},
+      ...ORDER.property
     },
     required: [
       'question',
@@ -77,16 +34,7 @@ export const FAQ_MODULE = {
     ]
   },
   definitions: {
-    question: {
-      label: 'Question'
-    },
-    answer: {
-      label: 'Answer',
-    },
-
-    ...CREATED_ON.definition()
-  },
-  metadata: {
-    autoSave: 0
+    question: {label: 'Question'},
+    answer: {label: 'Answer'}
   }
 };
