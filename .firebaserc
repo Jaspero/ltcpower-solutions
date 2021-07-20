@@ -4,11 +4,14 @@
       "hosting": {
         "cms": [
           "jaspero-automated-tests"
+        ],
+        "web": [
+          "jaspero-automated-tests-web"
         ]
       }
     }
   },
   "projects": {
-    "default": "jaspero-jms"
+    "default": "jaspero-automated-tests"
   }
 }
