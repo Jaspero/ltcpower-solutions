@@ -27,7 +27,7 @@ export const STATIC_CONFIG = {
         children: [
           {
             icon: 'handyman',
-            label: 'Sub categories',
+            label: 'Categories',
             type: 'link',
             value: '/m/subCategories'
           },
