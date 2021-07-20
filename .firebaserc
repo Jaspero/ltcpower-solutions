@@ -7,6 +7,9 @@
         ],
         "web": [
           "jaspero-automated-tests-web"
+        ],
+        "web": [
+          "jaspero-jms-web"
         ]
       }
     }

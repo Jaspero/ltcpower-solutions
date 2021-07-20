@@ -67,9 +67,7 @@
                 "output": "./assets/monaco/"
               }
             ],
-            "styles": [
-              "projects/cms/src/styles.scss"
-            ],
+            "styles": ["projects/cms/src/styles.scss"],
             "scripts": [
               "./node_modules/tinymce/tinymce.min.js",
               {
@@ -179,9 +177,7 @@
               "projects/cms/src/favicon.ico",
               "projects/cms/src/assets"
             ],
-            "styles": [
-              "projects/cms/src/styles.scss"
-            ],
+            "styles": ["projects/cms/src/styles.scss"],
             "scripts": []
           }
         },
@@ -193,9 +189,7 @@
               "projects/cms/tsconfig.spec.json",
               "projects/cms/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -236,7 +230,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/web",
+            "outputPath": "../public/web",
             "index": "projects/web/src/index.html",
             "main": "projects/web/src/main.ts",
             "polyfills": "projects/web/src/polyfills.ts",
@@ -246,9 +240,7 @@
               "projects/web/src/favicon.ico",
               "projects/web/src/assets"
             ],
-            "styles": [
-              "projects/web/src/styles.scss"
-            ],
+            "styles": ["projects/web/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -323,9 +315,7 @@
               "projects/web/src/favicon.ico",
               "projects/web/src/assets"
             ],
-            "styles": [
-              "projects/web/src/styles.scss"
-            ],
+            "styles": ["projects/web/src/styles.scss"],
             "scripts": []
           }
         },
@@ -337,9 +327,7 @@
               "projects/web/tsconfig.spec.json",
               "projects/web/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
