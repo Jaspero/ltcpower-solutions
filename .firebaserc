@@ -1,14 +1,17 @@
 {
   "targets": {
-    "jaspero-automated-tests": {
+    "jaspero-ltc": {
       "hosting": {
         "cms": [
-          "jaspero-automated-tests"
+          "jaspero-ltc"
+        ],
+        "web": [
+          "jaspero-ltc-web"
         ]
       }
     }
   },
   "projects": {
-    "default": "jaspero-jms"
+    "default": "jaspero-ltc"
   }
 }
