@@ -10,6 +10,7 @@ export const INVENTORY_BLOCK = {
     subCategories: true,
     loadMore: true,
     title: 'Our Rental Equipment',
+    page: 10,
     ...COMMON_OPTIONS.defaults
   },
   form: {
@@ -31,6 +32,7 @@ export const INVENTORY_BLOCK = {
         categories: {type: 'boolean'},
         subCategories: {type: 'boolean'},
         loadMore: {type: 'boolean'},
+        page: {type: 'number'},
         ...COMMON_OPTIONS.properties
       }
     },
@@ -39,6 +41,7 @@ export const INVENTORY_BLOCK = {
       categories: {label: 'Categories'},
       subCategories: {label: 'Subcategories'},
       loadMore: {label: 'Load More'},
+      page: {label: 'Page Size'},
       ...COMMON_OPTIONS.definitions
     }
   }

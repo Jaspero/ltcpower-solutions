@@ -16,6 +16,7 @@ interface InventoryOptions extends CommonOptions {
   loadMore: boolean;
   categories: boolean;
   subCategories: boolean;
+  page: number;
 }
 
 @UntilDestroy()
@@ -46,11 +47,11 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
   categories$: Observable<Category[]>;
   selectedCat: FormControl;
   selectedSubcat: FormControl;
-
-  page = 0;
   lastId: DocumentSnapshot<Product>;
 
   ngOnInit() {
+
+    this.data.page = this.data.page || 10;
 
     const {queryParams} = this.activatedRoute.snapshot;
 
@@ -164,7 +165,7 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
                   ref => {
 
                     let final: any = ref
-                      // .orderBy('order', 'asc');
+                      .orderBy('order', 'asc');
 
                     if (category) {
                       final = final.where(
@@ -186,17 +187,17 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
                       final = final.startAfter(this.lastId);
                     }
 
-                    return final.limit(this.page + 1);
+                    return final.limit(this.data.page + 1);
                   }
                 )
                   .get()
               ),
               map(data => {
-                if (data.docs.length !== (this.page + 1)) {
+                if (data.docs.length !== (this.data.page + 1)) {
                   this.enabled$.next(false);
                 }
 
-                const items = data.docs.slice(0, this.page);
+                const items = data.docs.slice(0, this.data.page);
 
                 this.lastId = items[items.length - 1] as DocumentSnapshot<Product>;
 
@@ -224,7 +225,7 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
                   ref => {
 
                     let final: any = ref
-                      // .orderBy('order', 'asc');
+                      .orderBy('order', 'asc');
 
                     if (category) {
                       final = final.where(
@@ -238,17 +239,17 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
                       final = final.startAfter(this.lastId);
                     }
 
-                    return final.limit(this.page + 1);
+                    return final.limit(this.data.page + 1);
                   }
                 )
                   .get()
               ),
               map(data => {
-                if (data.docs.length !== (this.page + 1)) {
+                if (data.docs.length !== (this.data.page + 1)) {
                   this.enabled$.next(false);
                 }
 
-                const items = data.docs.slice(0, this.page);
+                const items = data.docs.slice(0, this.data.page);
 
                 this.lastId = items[items.length - 1] as DocumentSnapshot<Product>;
 
