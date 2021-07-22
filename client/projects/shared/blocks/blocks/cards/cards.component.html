@@ -1,7 +1,7 @@
 <section class="p-y-m">
   <div class="grid">
     <div class="col-12 ta-center">
-      <h4>Our team</h4>
+      <h3 class="title c-accent">Our team</h3>
     </div>
     <div class="col-3 col-s-6 col-xs-12 m-t-m" *ngFor="let card of data.cards" [ngClass]="card.style" [ngStyle]="cardStyle(card)" (click)="viewDescription(card)">
       <div class="profile-card flex fd-col ai-center">

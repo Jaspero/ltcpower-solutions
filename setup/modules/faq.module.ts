@@ -10,8 +10,8 @@ export const FAQ_MODULE = {
     instance: {
       segments: [{
         fields: [
-          '/createdOn',
           '/question',
+          '/answer',
         ]
       }]
     },

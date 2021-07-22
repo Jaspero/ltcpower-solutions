@@ -7,7 +7,6 @@ import {CONTENT_BLOCK} from './blocks/content.block';
 import {FORM_BLOCK} from './blocks/form.block';
 import {INVENTORY} from './blocks/inventory';
 import {MAP} from './blocks/map';
-import {PRODUCT_BLOCK} from './blocks/product-block';
 import {COLUMNS} from './blocks/three-columns';
 import {PROCESSED} from './processed.const';
 import {FAQ} from './blocks/faq';
@@ -21,7 +20,6 @@ const blocks = [
   CARDS,
   MAP,
   COLUMNS,
-  PRODUCT_BLOCK
 ];
 
 export const PAGES_MODULE = {
@@ -42,6 +40,7 @@ export const PAGES_MODULE = {
             '/id',
             '/title',
             '/featured',
+            '/links',
           ],
           columnsDesktop: 6
         },
@@ -59,6 +58,7 @@ export const PAGES_MODULE = {
         {key: '/title', label: 'PB.FORM.TITLE'},
         {key: '/id', label: 'URL'},
         {key: '/featured', label: 'Featured', control: true },
+        {key: '/links', label: 'Links'},
       ]
     }
   },
@@ -67,6 +67,7 @@ export const PAGES_MODULE = {
       id: {type: 'string'},
       title: {type: 'string'},
       featured: {type: 'boolean'},
+      links: {type: 'string'},
       order: {type: 'number'},
       blocks: {type: 'array'},
       ...META.property(),
@@ -78,10 +79,23 @@ export const PAGES_MODULE = {
       label: 'URL',
       disableOn: 'edit',
       formatOnSave: FORMAT_SEARCH(),
-      hint: 'PB.FORM.ID_HINT'
+      hint: 'Created from title if left empty'
     },
     title: {label: 'Title'},
     featured: {label: 'Featured'},
+    links: {
+      label: 'Type of link',
+      component: {
+        type: 'select',
+        configuration: {
+          dataSet: [
+            {name: 'Header link', value: 'headerLink'},
+            {name: 'Footer Link', value: 'footerLink'},
+            {name: '', value: ''},
+          ]
+        }
+      }
+    },
     blocks: {
       component: {
         type: 'pb-blocks',
