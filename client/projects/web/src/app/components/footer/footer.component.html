@@ -10,7 +10,7 @@
     </div>
     <div class="footer-links">
       <a>
-        <a *ngFor="let footerLink of pages$ | async" class="header-link"  [routerLink]="footerLink.id" >{{footerLink.title}}</a>
+        <a *ngFor="let footerLink of pages" class="header-link"  [routerLink]="footerLink.id" >{{footerLink.title}}</a>
       </a>
     </div>
   </div>

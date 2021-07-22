@@ -7,7 +7,7 @@
   <div class="header-links hide-s c-accent hide-s">
     <a
       class="m-x-s header-link"
-      *ngFor="let page of pages$ | async" class="header-link"  [routerLink]="page.id"
+      *ngFor="let page of pages" class="header-link"  [routerLink]="page.id"
       routerLinkActive="active">
       {{page.title}}
     </a>
@@ -19,7 +19,7 @@
   </div>
   <div class="slide-menu c-accent" [class.active-menu]="menu">
     <a class="m-x-s slide-menu-links"
-      *ngFor="let page of pages$ | async" [routerLink]="page.id"
+      *ngFor="let page of pages" [routerLink]="page.id"
       routerLinkActive="active"
       (click)="toggleMenu()">
       {{page.title}}
