@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.pages$ = this.afs
       .collection('pages', ref =>
-        ref.where('featured', '==', true).orderBy('order', 'asc')
+        ref.where('header', '==', true).orderBy('order', 'asc')
       )
       .get()
       .pipe(

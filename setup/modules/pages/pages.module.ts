@@ -39,8 +39,8 @@ export const PAGES_MODULE = {
           fields: [
             '/id',
             '/title',
-            '/featured',
-            '/links',
+            '/header',
+            '/footer',
           ],
           columnsDesktop: 6
         },
@@ -57,8 +57,8 @@ export const PAGES_MODULE = {
       tableColumns: [
         {key: '/title', label: 'PB.FORM.TITLE'},
         {key: '/id', label: 'URL'},
-        {key: '/featured', label: 'Featured', control: true },
-        {key: '/links', label: 'Links'},
+        {key: '/header', label: 'Header', control: true},
+        {key: '/footer', label: 'Footer', control: true},
       ]
     }
   },
@@ -66,9 +66,8 @@ export const PAGES_MODULE = {
     properties: {
       id: {type: 'string'},
       title: {type: 'string'},
-      featured: {type: 'boolean'},
-      links: {type: 'string'},
-      order: {type: 'number'},
+      header: {type: 'boolean'},
+      footer: {type: 'boolean'},
       blocks: {type: 'array'},
       ...META.property(),
       ...ORDER.property
@@ -82,20 +81,8 @@ export const PAGES_MODULE = {
       hint: 'Created from title if left empty'
     },
     title: {label: 'Title'},
-    featured: {label: 'Featured'},
-    links: {
-      label: 'Type of link',
-      component: {
-        type: 'select',
-        configuration: {
-          dataSet: [
-            {name: 'Header link', value: 'headerLink'},
-            {name: 'Footer Link', value: 'footerLink'},
-            {name: '', value: ''},
-          ]
-        }
-      }
-    },
+    header: {label: 'Show In Header'},
+    footer: {label: 'Show In Footer'},
     blocks: {
       component: {
         type: 'pb-blocks',

@@ -5,7 +5,21 @@
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "featured",
+          "fieldPath": "footer",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "order",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "pages",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "header",
           "order": "ASCENDING"
         },
         {

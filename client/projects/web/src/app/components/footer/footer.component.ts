@@ -1,8 +1,8 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {AngularFirestore} from '@angular/fire/firestore';
+import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Page} from '../../modules/page/page.interface';
-import {Observable} from 'rxjs';
-import {AngularFirestore} from '@angular/fire/firestore';
 
 @Component({
   selector: 'ltc-footer',
@@ -22,7 +22,7 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
     this.pages$ = this.afs
       .collection('pages', ref =>
-        ref.where('footerLink', '==', true).orderBy('order', 'asc')
+        ref.where('footer', '==', true).orderBy('order', 'asc')
       )
       .get()
       .pipe(

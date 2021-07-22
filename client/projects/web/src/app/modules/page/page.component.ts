@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Observable} from 'rxjs';
-import {map, tap} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 import {Page} from './page.interface';
 
 @Component({
@@ -20,8 +20,7 @@ export class PageComponent implements OnInit {
   ngOnInit() {
     this.page$ = this.activatedRoute.data
       .pipe(
-        map(({page}) => page),
-        tap(console.log)
+        map(({page}) => page)
       );
   }
 }
