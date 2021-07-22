@@ -1,26 +1,28 @@
-<div class="header jc-between">
-  <div class="header-logo col-3">
-    <a [routerLink]="['/test']">
+<div class="header">
+  <div class="header-logo">
+    <a [routerLink]="['/Home']">
       <img src="assets/icons/logo.svg" alt="Logo">
     </a>
   </div>
-  <div class="header-links hide-s c-accent hide-s col-9">
-      <a *ngFor="let page of pages$ | async" class="header-link"  [routerLink]="page.id" >{{page.title}}</a>
+  <div class="header-links hide-s c-accent hide-s">
+    <a
+      class="m-x-s header-link"
+      *ngFor="let page of pages$ | async" class="header-link"  [routerLink]="page.id"
+      routerLinkActive="active">
+      {{page.title}}
+    </a>
   </div>
-<!--  <div class="mobile-menu show-s" (click)="toggleMenu()" [class.active-menu]="menu">-->
-<!--    <span class="mobile-menu-line-1"></span>-->
-<!--    <span class="mobile-menu-line-2"></span>-->
-<!--    <span class="mobile-menu-line-3"></span>-->
-<!--  </div>-->
-<!--  <div class="slide-menu c-accent" [class.active-menu]="menu">-->
-<!--    <a-->
-<!--      class="m-x-s slide-menu-links"-->
-<!--      *ngFor="let item of state.layout.headerLinks"-->
-<!--      routerLinkActive="active"-->
-<!--      [routerLink]="[item.link]"-->
-<!--      [routerLinkActiveOptions]="{exact: item.link === '/'}"-->
-<!--      (click)="toggleMenu()">-->
-<!--      {{item.label}}-->
-<!--    </a>-->
-<!--  </div>-->
+  <div class="mobile-menu show-s" (click)="toggleMenu()" [class.active-menu]="menu">
+    <span class="mobile-menu-line-1"></span>
+    <span class="mobile-menu-line-2"></span>
+    <span class="mobile-menu-line-3"></span>
+  </div>
+  <div class="slide-menu c-accent" [class.active-menu]="menu">
+    <a class="m-x-s slide-menu-links"
+      *ngFor="let page of pages$ | async" [routerLink]="page.id"
+      routerLinkActive="active"
+      (click)="toggleMenu()">
+      {{page.title}}
+    </a>
+  </div>
 </div>

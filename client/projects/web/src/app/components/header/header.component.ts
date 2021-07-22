@@ -17,6 +17,12 @@ export class HeaderComponent implements OnInit {
 
   pages$: Observable<Page[]>;
 
+  menu = false;
+
+  toggleMenu() {
+    this.menu = !this.menu;
+  }
+
   ngOnInit() {
     this.pages$ = this.afs
       .collection('pages', ref =>

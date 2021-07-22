@@ -57,15 +57,15 @@
 /* Hide & show
  *============================================================================*/
 
-.hide-xs { @media (max-width: $screen-xs) { display: none; } }
-.hide-s  { @media (max-width: $screen-s)  { display: none; } }
-.hide-m  { @media (max-width: $screen-m)  { display: none; } }
-.hide-l  { @media (max-width: $screen-l)  { display: none; } }
+.hide-xs { @media (max-width: $screen-xs) { display: none!important; } }
+.hide-s  { @media (max-width: $screen-s)  { display: none!important; } }
+.hide-m  { @media (max-width: $screen-m)  { display: none!important; } }
+.hide-l  { @media (max-width: $screen-l)  { display: none!important; } }
 
-.show-xs { @media (min-width: $screen-xs + 1px) { display: none; } }
-.show-s  { @media (min-width: $screen-s + 1px)  { display: none; } }
-.show-m  { @media (min-width: $screen-m + 1px)  { display: none; } }
-.show-l  { @media (min-width: $screen-l + 1px)  { display: none; } }
+.show-xs { @media (min-width: $screen-xs + 1px) { display: none!important; } }
+.show-s  { @media (min-width: $screen-s + 1px)  { display: none!important; } }
+.show-m  { @media (min-width: $screen-m + 1px)  { display: none!important; } }
+.show-l  { @media (min-width: $screen-l + 1px)  { display: none!important; } }
 
 
 
