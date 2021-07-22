@@ -1,6 +1,11 @@
 section {
   margin-top: 65px;
 }
+
+.value {
+  font-weight: 700;
+}
+
 .spec-btn {
   color: #FF6B18;
   font-weight: bold;
@@ -34,6 +39,7 @@ section {
 
 .accordion-title.active-accordion {
   color: #FF6B18;
+  padding: 10px 0;
 }
 
 .accordion-content.active-accordion {
@@ -83,6 +89,7 @@ section {
 }
 
 .product-image {
+  border: 1px solid #868686;
   height: 384px;
   vertical-align: middle;
   width: 100%;
@@ -187,11 +194,12 @@ textarea {
  *============================================================================*/
 
 table {
+  display: none;
   background: white;
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  border: .1rem solid #ccc;
+  border: 1px solid #ccc;
   border-bottom: none;
 
 
@@ -200,7 +208,7 @@ table {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: .1rem solid #ccc;
+      border-bottom: 1px solid #ccc;
     }
     tr:hover {
       background: rgba(0,0,0,.05);
@@ -212,6 +220,10 @@ table {
       font-size : 1rem;
     }
   }
+}
+
+.table-active {
+  display: table;
 }
 
 .value {

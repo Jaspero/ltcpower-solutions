@@ -1,10 +1,10 @@
 import {COMMON_OPTIONS} from './shared';
 
-export const FAQ_BLOCK = {
+export const FAQ = {
   id: 'faq',
   label: 'Faq',
   icon: 'subject',
-  previewTemplate: `<jms-faq-block [data]="data"></jms-faq-block>`,
+  previewTemplate: `<jms-faq [data]="data"></jms-faq>`,
   previewValue: {
     content: '<h1>Custom Title</h1><h2>Custom Subtitle</h2><p>Custom content</p>',
     ...COMMON_OPTIONS.defaults

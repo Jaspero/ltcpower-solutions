@@ -6,7 +6,7 @@ import {map, tap} from 'rxjs/operators';
 import {Page} from '../../../../web/src/app/modules/page/page.interface';
 
 @Component({
-  selector: 'jms-faq-block',
+  selector: 'jms-faq',
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

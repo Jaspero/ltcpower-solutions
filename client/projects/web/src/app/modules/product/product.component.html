@@ -13,8 +13,8 @@
         {{page.title}}
       </h2>
       <div class="product-info m-y-s" *ngFor="let spec of page.primarySpecs">
-        <p>{{spec.label}}</p>
-        <h5>{{spec.value}}</h5>
+        <p class=label>{{spec.label}}</p>
+        <h5 class="value">{{spec.value}}</h5>
       </div>
     </div>
 
@@ -30,7 +30,7 @@
         </div>
 
         <div class="accordion-content" [class.active-accordion]="spec.active">
-          <table>
+          <table [class.table-active]="spec.active">
             <tbody>
               <tr *ngFor="let item of spec.values">
                 <td class="fw-bold">{{item.label}}</td>

@@ -11,7 +11,7 @@ export const PRODUCT_MODULE = {
   },
   layout: {
     editTitleKey: 'title',
-    ...ORDER,
+    ...ORDER.layout(),
     instance: {
       segments: [
         {

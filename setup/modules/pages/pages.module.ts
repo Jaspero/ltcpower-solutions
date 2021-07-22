@@ -2,25 +2,25 @@ import {FORMAT_SEARCH} from '../shared/format-search';
 import {META} from '../shared/meta';
 import {ORDER} from '../shared/order';
 import {BACKGROUND_HERO} from './blocks/background-hero';
-import {CARDS} from './blocks/cards.block';
+import {CARDS} from './blocks/cards';
 import {CONTENT_BLOCK} from './blocks/content.block';
-import {FAQ_BLOCK} from './blocks/faq-block';
 import {FORM_BLOCK} from './blocks/form.block';
-import {INVENTORY_BLOCK} from './blocks/inventory.block';
+import {INVENTORY} from './blocks/inventory';
 import {MAP} from './blocks/map';
 import {PRODUCT_BLOCK} from './blocks/product-block';
-import {COLUMN_BLOCK} from './blocks/three-column-block';
+import {COLUMNS} from './blocks/three-columns';
 import {PROCESSED} from './processed.const';
+import {FAQ} from './blocks/faq';
 
 const blocks = [
   CONTENT_BLOCK,
   FORM_BLOCK,
-  INVENTORY_BLOCK,
+  INVENTORY,
   BACKGROUND_HERO,
-  FAQ_BLOCK,
+  FAQ,
   CARDS,
   MAP,
-  COLUMN_BLOCK,
+  COLUMNS,
   PRODUCT_BLOCK
 ];
 
