@@ -6,7 +6,7 @@ export const COMMON_OPTIONS = {
     verticalAlignment: {type: 'string'},
     additionalStyle: {type: 'string'},
     backgroundRepeat: {type: 'boolean'},
-    backgroundSize: {type: 'string'},
+    backgroundSize: {type: 'string'}
   },
   segment: [
     {
@@ -28,7 +28,7 @@ export const COMMON_OPTIONS = {
         {
           title: 'PB.FORM.BLOCKS.SHARED.ADVANCED_OPTIONS',
           fields: ['/additionalStyle']
-        },
+        }
       ]
     }
   ],
@@ -42,7 +42,10 @@ export const COMMON_OPTIONS = {
             {name: 'PB.FORM.BLOCKS.SHARED.SIZE_SMALL', value: 'small'},
             {name: 'PB.FORM.BLOCKS.SHARED.SIZE_REGULAR', value: 'regular'},
             {name: 'PB.FORM.BLOCKS.SHARED.SIZE_LARGE', value: 'large'},
-            {name: 'PB.FORM.BLOCKS.SHARED.SIZE_FULL_SCREEN', value: 'full-screen'},
+            {
+              name: 'PB.FORM.BLOCKS.SHARED.SIZE_FULL_SCREEN',
+              value: 'full-screen'
+            }
           ]
         }
       }
@@ -63,7 +66,7 @@ export const COMMON_OPTIONS = {
         configuration: {
           dataSet: [
             {name: 'bg-size:cover', value: 'cover'},
-            {name: 'bg-size:contain', value: 'regular'},
+            {name: 'bg-size:contain', value: 'regular'}
           ]
         }
       }
@@ -74,9 +77,18 @@ export const COMMON_OPTIONS = {
         type: 'select',
         configuration: {
           dataSet: [
-            {name: 'PB.FORM.BLOCKS.SHARED.VERTICAL_ALIGNMENT_CENTER', value: 'center'},
-            {name: 'PB.FORM.BLOCKS.SHARED.VERTICAL_ALIGNMENT_TOP', value: 'top'},
-            {name: 'PB.FORM.BLOCKS.SHARED.VERTICAL_ALIGNMENT_BOTTOM', value: 'bottom'},
+            {
+              name: 'PB.FORM.BLOCKS.SHARED.VERTICAL_ALIGNMENT_CENTER',
+              value: 'center'
+            },
+            {
+              name: 'PB.FORM.BLOCKS.SHARED.VERTICAL_ALIGNMENT_TOP',
+              value: 'top'
+            },
+            {
+              name: 'PB.FORM.BLOCKS.SHARED.VERTICAL_ALIGNMENT_BOTTOM',
+              value: 'bottom'
+            }
           ]
         }
       }
@@ -109,5 +121,25 @@ export const COMMON_OPTIONS = {
     size: 'regular',
     contained: true,
     verticalAlignment: 'center'
+  }
+};
+
+export const TEXT_FIELD = {
+  component: {
+    type: 'tinymce',
+    configuration: {
+      options: {
+        plugins: ['link', 'lists', 'advlist', 'autolink', 'emoticons'],
+        menubar: false,
+        toolbar: [
+          'styleselect',
+          'bold italic underline',
+          'forecolor backcolor',
+          'alignleft aligncenter alignright alignjustify',
+          'bullist numlist outdent indent',
+          'link emoticons'
+        ].join(' | ')
+      }
+    }
   }
 };

@@ -6,17 +6,15 @@ export const CONTENT_BLOCK = {
   icon: 'subject',
   previewTemplate: `<jms-content [data]="data"></jms-content>`,
   previewValue: {
-    content: '<h1>Custom Title</h1><h2>Custom Subtitle</h2><p>Custom content</p>',
+    content:
+      '<h1>Custom Title</h1><h2>Custom Subtitle</h2><p>Custom content</p>',
     ...COMMON_OPTIONS.defaults
   },
   form: {
     segments: [
       {
         type: 'empty',
-        fields: [
-          '/title',
-          '/description'
-        ],
+        fields: ['/title', '/description']
       },
       ...COMMON_OPTIONS.segment
     ],
@@ -29,7 +27,24 @@ export const CONTENT_BLOCK = {
     },
     definitions: {
       title: {label: 'Title'},
-      description: {label: 'Description'},
+      description: {
+        label: 'Description',
+        component: {
+          type: 'tinymce'
+        },
+        configuration: {
+          options: {
+            plugins: ['link', 'list', 'autolink', 'emoticons'],
+            menubar: false,
+            toolbar: [
+              'styleselect',
+              'bold italic underline',
+              'list',
+              'link emoticons'
+            ].join(' | ')
+          }
+        }
+      },
       ...COMMON_OPTIONS.definitions
     }
   }
