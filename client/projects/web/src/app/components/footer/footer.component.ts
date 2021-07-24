@@ -1,4 +1,6 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {STATE} from '../../consts/state.const';
+import {Page} from '../../modules/page/page.interface';
 
 @Component({
   selector: 'ltc-footer',
@@ -11,6 +13,9 @@ export class FooterComponent implements OnInit {
 
   year = new Date().getFullYear();
 
+  pages: Page[];
+
   ngOnInit() {
+    this.pages = STATE.pages.filter(page => page.footer);
   }
 }

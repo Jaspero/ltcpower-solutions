@@ -7,3 +7,21 @@
     text-decoration: underline;
   }
 }
+@media (max-width: 900px) {
+  .footer {
+    .grid {
+      justify-content: center;
+    }
+  }
+  .footer-logo {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-links {
+    margin-top: auto;
+  }
+  .date {
+    width: 100%;
+    text-align: center;
+  }
+}

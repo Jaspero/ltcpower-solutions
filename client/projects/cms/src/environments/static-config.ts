@@ -26,14 +26,8 @@ export const STATIC_CONFIG = {
         type: 'expandable',
         children: [
           {
-            icon: 'precision_manufacturing',
-            label: 'Categories',
-            type: 'link',
-            value: '/m/categories'
-          },
-          {
             icon: 'handyman',
-            label: 'Sub categories',
+            label: 'Categories',
             type: 'link',
             value: '/m/subCategories'
           },
@@ -70,12 +64,6 @@ export const STATIC_CONFIG = {
             label: 'LAYOUT.INVITES',
             type: 'link',
             value: '/m/user-invites'
-          },
-          {
-            icon: 'vpn_key',
-            label: 'GENERAL.ROLES',
-            type: 'link',
-            value: '/m/roles'
           },
           {
            icon: 'email',

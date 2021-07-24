@@ -7,6 +7,9 @@
         ],
         "web": [
           "jaspero-ltc-web"
+        ],
+        "web": [
+          "jaspero-automated-tests-web"
         ]
       }
     }

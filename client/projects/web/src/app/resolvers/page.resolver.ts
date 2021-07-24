@@ -3,9 +3,10 @@ import {AngularFirestore} from '@angular/fire/firestore';
 import {Meta, Title} from '@angular/platform-browser';
 import {ActivatedRouteSnapshot, Resolve, Router} from '@angular/router';
 import {snapshotMap} from '@shared/utils/snapshot-map.operator';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {BASE_TITLE} from '../consts/base-title.const';
+import {STATE} from '../consts/state.const';
 
 @Injectable({providedIn: 'root'})
 export class PageResolver implements Resolve<any> {
@@ -56,6 +57,11 @@ export class PageResolver implements Resolve<any> {
   }
 
   private getItem(id: string, collection?: string): any {
+
+    if (collection === 'pages') {
+      return of(STATE.pages.find(page => page.id === id));
+    }
+
     return this.afs
       .collection(collection)
       .doc(id)

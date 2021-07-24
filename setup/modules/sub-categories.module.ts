@@ -1,9 +1,10 @@
 import {FORMAT_SEARCH} from './shared/format-search';
+import {IMAGE_PIPE} from './shared/image-pipe';
 import {ORDER} from './shared/order';
 
 export const SUBCATEGORIES_MODULE =  {
   id: 'subCategories',
-  name: 'Sub categories',
+  name: 'Categories',
   authorization: {
     write: ['admin']
   },
@@ -15,10 +16,9 @@ export const SUBCATEGORIES_MODULE =  {
         {
           title: 'General',
           fields: [
-            '/category',
-            '/featured',
-            '/id',
             '/title',
+            '/id',
+            '/featured',
             '/description'
           ]
         }
@@ -26,10 +26,16 @@ export const SUBCATEGORIES_MODULE =  {
     },
     table: {
       tableColumns: [
+        {
+          key: '/featured',
+          label: 'Featured Image',
+          pipe: ['custom'],
+          pipeArguments: {
+            0: IMAGE_PIPE
+          }
+        },
         {key: '/title', label: 'Title'},
-        {key: '/id', label: 'URL'},
-        {key: '/category', label: 'Category'},
-        {key: '/featured', label: 'Featured Image'}
+        {key: '/id', label: 'URL'}
       ]
     }
   },
@@ -48,7 +54,8 @@ export const SUBCATEGORIES_MODULE =  {
       label: 'URL',
       disableOn: 'edit',
       formatOnSave: FORMAT_SEARCH(),
-      hint: 'Created from title if left empty.'
+      hint: 'Created from title if left empty.',
+      columnsDesktop: 6
     },
     category: {
       label: 'Category',
@@ -65,18 +72,12 @@ export const SUBCATEGORIES_MODULE =  {
     },
     description: {
       label: 'Description',
-      component: {
-        type: 'textarea'
-      }
+      component: {type: 'textarea'}
     },
     featured: {
       label: 'Featured Image',
-      component: {
-        type: 'image'
-      }
+      component: {type: 'image'}
     },
-    title: {
-      label: 'Title'
-    },
+    title: {label: 'Title', columnsDesktop: 6},
   }
 };

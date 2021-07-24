@@ -1,16 +1,16 @@
 import {COMMON_OPTIONS} from './shared';
 
-export const INVENTORY_BLOCK = {
+export const INVENTORY = {
   id: 'inventory',
   label: 'Inventory',
   icon: 'subject',
-  previewTemplate: `<jms-inventory-block [data]="data"></jms-inventory-block>`,
+  previewTemplate: `<jms-inventory [data]="data"></jms-inventory>`,
   previewValue: {
     categories: true,
     subCategories: true,
     loadMore: true,
     title: 'Our Rental Equipment',
-    page: 10,
+    page: 20,
     ...COMMON_OPTIONS.defaults
   },
   form: {

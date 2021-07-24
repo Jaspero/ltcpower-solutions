@@ -12,7 +12,7 @@ interface ColumnOptions extends CommonOptions {
 }
 
 @Component({
-  selector: 'jms-three-column-block',
+  selector: 'jms-three-column',
   templateUrl: './three-column.component.html',
   styleUrls: ['./three-column.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

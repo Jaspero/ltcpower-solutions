@@ -9,9 +9,7 @@
       <p class="m-l-m date">© {{year}} LTC power rentals. All rights reserved.</p>
     </div>
     <div class="footer-links">
-      <a>
-        link
-      </a>
+        <a *ngFor="let footerLink of pages; last as last" [class.m-r-s]="!last"  [routerLink]="footerLink.id" >{{footerLink.title}}</a>
     </div>
   </div>
 </div>

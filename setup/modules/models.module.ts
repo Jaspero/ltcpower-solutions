@@ -1,4 +1,5 @@
 import {FORMAT_SEARCH} from './shared/format-search';
+import {IMAGE_PIPE} from './shared/image-pipe';
 import {META} from './shared/meta';
 import {ORDER} from './shared/order';
 
@@ -54,8 +55,16 @@ export const MODELS_MODULE = {
     },
     table: {
       tableColumns: [
-        {key: '/product', label: 'Product'},
+        {
+          key: '/featured',
+          label: 'Featured Image',
+          pipe: ['custom'],
+          pipeArguments: {
+            0: IMAGE_PIPE
+          }
+        },
         {key: '/title', label: 'Title'},
+        {key: '/product', label: 'Product'},
         {key: '/id', label: 'URL'}
       ]
     }

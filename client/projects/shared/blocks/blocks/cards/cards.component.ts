@@ -3,6 +3,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {CommonBlockComponent, CommonOptions} from '@shared/blocks/blocks/common.block';
 import {background} from '@shared/blocks/utils/background';
 
+
 interface Card {
   title?: string;
   subtitle?: string;

@@ -2,26 +2,24 @@ import {FORMAT_SEARCH} from '../shared/format-search';
 import {META} from '../shared/meta';
 import {ORDER} from '../shared/order';
 import {BACKGROUND_HERO} from './blocks/background-hero';
-import {CARDS} from './blocks/cards.block';
+import {CARDS} from './blocks/cards';
 import {CONTENT_BLOCK} from './blocks/content.block';
-import {FAQ_BLOCK} from './blocks/faq-block';
 import {FORM_BLOCK} from './blocks/form.block';
-import {INVENTORY_BLOCK} from './blocks/inventory.block';
+import {INVENTORY} from './blocks/inventory';
 import {MAP} from './blocks/map';
-import {PRODUCT_BLOCK} from './blocks/product-block';
-import {COLUMN_BLOCK} from './blocks/three-column-block';
+import {COLUMNS} from './blocks/three-columns';
 import {PROCESSED} from './processed.const';
+import {FAQ} from './blocks/faq';
 
 const blocks = [
   CONTENT_BLOCK,
   FORM_BLOCK,
-  INVENTORY_BLOCK,
+  INVENTORY,
   BACKGROUND_HERO,
-  FAQ_BLOCK,
+  FAQ,
   CARDS,
   MAP,
-  COLUMN_BLOCK,
-  PRODUCT_BLOCK
+  COLUMNS,
 ];
 
 export const PAGES_MODULE = {
@@ -41,7 +39,8 @@ export const PAGES_MODULE = {
           fields: [
             '/id',
             '/title',
-            '/featured',
+            '/header',
+            '/footer',
           ],
           columnsDesktop: 6
         },
@@ -58,7 +57,8 @@ export const PAGES_MODULE = {
       tableColumns: [
         {key: '/title', label: 'PB.FORM.TITLE'},
         {key: '/id', label: 'URL'},
-        {key: '/featured', label: 'Featured', control: true },
+        {key: '/header', label: 'Header', control: true},
+        {key: '/footer', label: 'Footer', control: true},
       ]
     }
   },
@@ -66,8 +66,8 @@ export const PAGES_MODULE = {
     properties: {
       id: {type: 'string'},
       title: {type: 'string'},
-      featured: {type: 'boolean'},
-      order: {type: 'number'},
+      header: {type: 'boolean'},
+      footer: {type: 'boolean'},
       blocks: {type: 'array'},
       ...META.property(),
       ...ORDER.property
@@ -78,10 +78,11 @@ export const PAGES_MODULE = {
       label: 'URL',
       disableOn: 'edit',
       formatOnSave: FORMAT_SEARCH(),
-      hint: 'PB.FORM.ID_HINT'
+      hint: 'Created from title if left empty'
     },
     title: {label: 'Title'},
-    featured: {label: 'Featured'},
+    header: {label: 'Show In Header'},
+    footer: {label: 'Show In Footer'},
     blocks: {
       component: {
         type: 'pb-blocks',

@@ -1,4 +1,5 @@
 import {FORMAT_SEARCH} from './shared/format-search';
+import {IMAGE_PIPE} from './shared/image-pipe';
 import {META} from './shared/meta';
 import {ORDER} from './shared/order';
 
@@ -10,15 +11,14 @@ export const PRODUCT_MODULE = {
   },
   layout: {
     editTitleKey: 'title',
-    ...ORDER,
+    ...ORDER.layout(),
     instance: {
       segments: [
         {
           title: 'General',
           fields: [
-            '/id',
             '/title',
-            '/categories',
+            '/id',
             '/subCategory',
             '/featured',
             '/excerpt'
@@ -28,9 +28,16 @@ export const PRODUCT_MODULE = {
     },
     table: {
       tableColumns: [
+        {
+          key: '/featured',
+          label: 'Featured Image',
+          pipe: ['custom'],
+          pipeArguments: {
+            0: IMAGE_PIPE
+          }
+        },
         {key: '/title', label: 'Title'},
         {key: '/id', label: 'URL'},
-        {key: '/categories', label: 'Category'},
         {key: '/subCategory', label: 'Sub category'},
       ]
     }
@@ -81,7 +88,8 @@ export const PRODUCT_MODULE = {
       label: 'URL',
       disableOn: 'edit',
       formatOnSave: FORMAT_SEARCH(),
-      hint: 'Created from title if left empty.'
+      hint: 'Created from title if left empty.',
+      columnsDesktop: 6
     },
     featured: {
       label: 'Featured Image',
@@ -95,7 +103,7 @@ export const PRODUCT_MODULE = {
         type: 'textarea'
       }
     },
-    title: {label: 'Title'},
+    title: {label: 'Title', columnsDesktop: 6},
     ...META.definitions()
   }
 };

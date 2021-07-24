@@ -134,7 +134,7 @@ export class FormComponent extends CommonBlockComponent {
           } as Form;
 
           this.fg = this.fb.group(
-            this.form.fields.reduce((acc, cur) => {
+           (this.form.fields || []).reduce((acc, cur) => {
               acc[cur.id] = [
                 cur.value || (cur.type === 'checkbox' ? [] : ''),
                 [

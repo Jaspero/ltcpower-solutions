@@ -1,10 +1,10 @@
 import {COMMON_OPTIONS} from './shared';
 
-export const COLUMN_BLOCK = {
+export const COLUMNS = {
   id: 'columns',
   label: 'Columns',
   icon: 'subject',
-  previewTemplate: `<jms-three-column-block [data]="data"></jms-three-column-block>`,
+  previewTemplate: `<jms-three-column [data]="data"></jms-three-column>`,
   previewValue: {
     content:
       '<h1>Custom Title</h1><h2>Custom Subtitle</h2><p>Custom content</p>',
