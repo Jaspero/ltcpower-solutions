@@ -10,7 +10,7 @@ if (environemnt === 'd') {
 } else {
   environemnt = {
     serviceAccount: require('./serviceAccountKey.json'),
-    databaseURL: 'https://jaspero-automated-tests.firebaseio.com'
+    databaseURL: 'https://jaspero-ltc.firebaseio.com'
   };
 }
 
