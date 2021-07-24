@@ -42,7 +42,7 @@ jobs:
           args: deploy --only hosting:web
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          PROJECT_ID: 'jaspero-automated-tests'
+          PROJECT_ID: 'jaspero-ltc'
       - name: Commit
         if: contains(github.ref, 'master')
         run: |
