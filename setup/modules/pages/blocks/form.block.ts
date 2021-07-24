@@ -7,8 +7,7 @@ export const FORM_BLOCK = {
   previewTemplate: `<jms-form [data]="data"></jms-form>`,
   previewValue: {
     title: '<h2>Form Title</h2>',
-    description: '<h3>Form description</h3>',
-    fields: []
+    description: '<h3>Form description</h3>'
   },
   form: {
     segments: [

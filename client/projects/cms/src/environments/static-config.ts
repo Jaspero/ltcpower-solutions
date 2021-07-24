@@ -52,6 +52,12 @@ export const STATIC_CONFIG = {
         value: '/m/faq'
       },
       {
+        icon: 'contact_mail',
+        label: 'Forms',
+        type: 'link',
+        value: '/m/forms'
+      },
+      {
         children: [
           {
             icon: 'supervised_user_circle',
