@@ -1,0 +1,20 @@
+<div class="grid p-y-l">
+  <div class="col-12 ta-center">
+    <h3 class="title c-accent">Our services</h3>
+  </div>
+  <div class="col-4 col-s-6 col-xs-12" *ngFor="let card of data.cards" (click)="openDialog(card)">
+    <div class="service-card">
+      <div class="card-header bg-accent c-light">
+        <h>{{card.title}}</h>
+      </div>
+      <div class="card-body p-x-xs m-t-m" [ngStyle]="{'background-image': 'url('+ card.image +')'}">
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #serviceDialog>
+  <div class="col-12">
+    <h3>{{serviceTitle}}</h3>
+    <p class="m-t-s">{{serviceDescription}}</p>
+  </div>
+</ng-template>

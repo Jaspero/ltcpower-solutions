@@ -21,31 +21,6 @@ export const STATIC_CONFIG = {
         value: '/m/pages'
       },
       {
-        icon: 'construction',
-        label: 'Inventory',
-        type: 'expandable',
-        children: [
-          {
-            icon: 'handyman',
-            label: 'Categories',
-            type: 'link',
-            value: '/m/subCategories'
-          },
-          {
-            icon: 'construction',
-            label: 'Products',
-            type: 'link',
-            value: '/m/products'
-          },
-          {
-            icon: 'build',
-            label: 'Models',
-            type: 'link',
-            value: '/m/models'
-          },
-        ]
-      },
-      {
         icon: 'question_answer',
         label: 'Faq',
         type: 'link',

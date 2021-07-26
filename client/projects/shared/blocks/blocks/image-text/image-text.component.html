@@ -1,0 +1,9 @@
+<div class="grid p-y-l">
+  <div class="col-6 col-s-12 image-container">
+    <img [src]="data.image">
+  </div>
+  <div class="col-6 col-s-12 text-container">
+    <h5 class="c-accent" *ngIf="data.title">{{data.title}}</h5>
+    <p class="m-t-s" *ngIf="data.description">{{data.description}}</p>
+  </div>
+</div>

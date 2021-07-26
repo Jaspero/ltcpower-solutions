@@ -18,28 +18,33 @@ import {FormComponent} from './blocks/form/form.component';
 import {MapComponent} from './blocks/map/map.component';
 import {ThreeColumnComponent} from './blocks/three-column/three-column.component';
 import {BlockLinkDirective} from './directives/block-link/block-link.directive';
+import { ServiceCardComponent } from './blocks/service-card/service-card.component';
+import { ImageTextComponent } from './blocks/image-text/image-text.component';
+import { ProjectsComponent } from './blocks/projects/projects.component';
 
 export const BLOCKS = {
   content: ContentComponent,
   form: FormComponent,
-  inventory: InventoryComponent,
   hero: BackgroundHeroComponent,
   faq: FaqComponent,
   cards: CardsComponent,
   map: MapComponent,
   columns: ThreeColumnComponent,
+  'service-card': ServiceCardComponent,
+  'image-text': ImageTextComponent,
 };
 
 const B_COMPONENTS = [
   BlockRendererComponent,
   ContentComponent,
-  InventoryComponent,
   BackgroundHeroComponent,
   FormComponent,
   FaqComponent,
   CardsComponent,
   MapComponent,
   ThreeColumnComponent,
+  ServiceCardComponent,
+  ImageTextComponent
 ];
 
 @NgModule({
@@ -52,6 +57,9 @@ const B_COMPONENTS = [
     SubCategoriesCardComponent,
 
   ...B_COMPONENTS,
+    ServiceCardComponent,
+    ImageTextComponent,
+    ProjectsComponent,
   ],
   exports: [
     ...B_COMPONENTS

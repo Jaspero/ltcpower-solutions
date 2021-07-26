@@ -5,18 +5,20 @@ import {BACKGROUND_HERO} from './blocks/background-hero';
 import {CARDS} from './blocks/cards';
 import {CONTENT_BLOCK} from './blocks/content.block';
 import {FORM_BLOCK} from './blocks/form.block';
-import {INVENTORY} from './blocks/inventory';
 import {MAP} from './blocks/map';
 import {COLUMNS} from './blocks/three-columns';
 import {PROCESSED} from './processed.const';
 import {FAQ} from './blocks/faq';
+import {SERVICECARD} from './blocks/service-card';
+import {IMAGE_TEXT} from './blocks/image-text';
 
 const blocks = [
   CONTENT_BLOCK,
   FORM_BLOCK,
-  INVENTORY,
   BACKGROUND_HERO,
   FAQ,
+  IMAGE_TEXT,
+  SERVICECARD,
   CARDS,
   MAP,
   COLUMNS,

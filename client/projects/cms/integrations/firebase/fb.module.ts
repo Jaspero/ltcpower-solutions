@@ -61,7 +61,7 @@ export class FirebaseModule {
         },
         {
           provide: USE_FUNCTIONS_EMULATOR,
-          useValue: environment.firebaseEmulators ? ['localhost', 5000] : undefined
+          useValue: environment.firebaseEmulators ? ['localhost', 5200] : undefined
         },
       ]
     };
