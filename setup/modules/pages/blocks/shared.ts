@@ -51,22 +51,22 @@ export const COMMON_OPTIONS = {
       }
     },
     contained: {
-      label: 'bg-size:contained'
+      label: 'Contained'
     },
     background: {
       label: 'Background url'
     },
     backgroundRepeat: {
-      label: 'backgroundRepeat'
+      label: 'Background Repeat'
     },
     backgroundSize: {
-      label: 'Background-size',
+      label: 'Background size',
       component: {
         type: 'select',
         configuration: {
           dataSet: [
-            {name: 'bg-size:cover', value: 'cover'},
-            {name: 'bg-size:contain', value: 'regular'}
+            {name: 'Cover', value: 'cover'},
+            {name: 'Contain', value: 'regular'}
           ]
         }
       }
@@ -121,25 +121,5 @@ export const COMMON_OPTIONS = {
     size: 'regular',
     contained: true,
     verticalAlignment: 'center'
-  }
-};
-
-export const TEXT_FIELD = {
-  component: {
-    type: 'tinymce',
-    configuration: {
-      options: {
-        plugins: ['link', 'lists', 'advlist', 'autolink', 'emoticons'],
-        menubar: false,
-        toolbar: [
-          'styleselect',
-          'bold italic underline',
-          'forecolor backcolor',
-          'alignleft aligncenter alignright alignjustify',
-          'bullist numlist outdent indent',
-          'link emoticons'
-        ].join(' | ')
-      }
-    }
   }
 };

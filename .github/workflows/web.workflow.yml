@@ -11,12 +11,12 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-  steps:
-    - name: Checkout Repo
-      uses: actions/checkout@master
-      with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of the personal token
-        fetch-depth: 0 # otherwise, it fails to push refs to dest repo
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of the personal token
+          fetch-depth: 0 # otherwise, it fails to push refs to dest repo
       - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
@@ -48,7 +48,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -f --all dist/
+          git add -f --all public/
           git commit -m "BOT - Connected build branch"
       - name: Update current app version
         if: contains(github.ref, 'master')

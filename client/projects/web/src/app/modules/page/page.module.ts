@@ -18,6 +18,17 @@ const routes: Routes = [
     }
   },
   {
+    path: '404',
+    component: PageComponent,
+    resolve: {
+      page: PageResolver
+    },
+    data: {
+      id: '404',
+      collection: 'pages'
+    }
+  },
+  {
     path: ':id',
     component: PageComponent,
     resolve: {
