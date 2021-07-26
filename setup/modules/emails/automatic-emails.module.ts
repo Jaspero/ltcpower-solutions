@@ -2,7 +2,7 @@ import {PROCESSED} from './processed.const';
 
 export const AUTOMATIC_EMAILS_MODULE = {
   id: 'automatic-emails',
-  name: 'MODULES.AUTOMATIC_EMAILS',
+  name: 'Automatic mails',
   layout: {
     editTitleKey: 'name',
     instance: {

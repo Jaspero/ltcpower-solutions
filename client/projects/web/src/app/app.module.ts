@@ -12,6 +12,7 @@ import {AppComponent} from './app.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {HeaderComponent} from './components/header/header.component';
 
+
 export function init(injector: Injector) {
   return () => {
     return appInit(injector);

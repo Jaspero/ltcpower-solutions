@@ -1,0 +1,12 @@
+<section *ngIf="page" class="m-y-l">
+  <div class="grid">
+    <div class="col-12 ta-center m-y-m">
+      <h5 class="c-accent">FAQ</h5>
+    </div>
+    <div class="w-full faq" *ngFor="let item of page | async; index as index;">
+      <p class="m-y-xs w-full question" (click)="activeIndex = index" [class.active]="activeIndex === index">{{page.question}}</p>
+      <p class="w-full answer" [class.active]="activeIndex === index">{{page.answer}}</p>
+    </div>
+  </div>
+</section>
+
