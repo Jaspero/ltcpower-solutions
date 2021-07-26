@@ -6,13 +6,14 @@ import {PageResolver} from '../../resolvers/page.resolver';
 import {FaqComponent} from './faq.component';
 
 const routes: Routes = [{
-  path: ':id',
+  path: '',
   component: FaqComponent,
   resolve: {
     page: PageResolver
   },
   data: {
-    collection: 'faq',
+    collection: 'pages',
+    id: 'faq'
   }
 }];
 
