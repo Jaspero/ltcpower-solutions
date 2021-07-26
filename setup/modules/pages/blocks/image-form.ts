@@ -1,10 +1,10 @@
 import {COMMON_OPTIONS} from './shared';
 
-export const IMAGE_TEXT = {
-  id: 'image-text',
-  label: 'Image-text',
+export const IMAGE_FORM = {
+  id: 'image-form',
+  label: 'Image-form',
   icon: 'subject',
-  previewTemplate: `<jms-image-text [data]="data"></jms-image-text>`,
+  previewTemplate: `<jms-image-form [data]="data"></jms-image-form>`,
   previewValue: {
     content: '<h1>Custom Title</h1><h2>Custom Subtitle</h2><p>Custom content</p>',
     ...COMMON_OPTIONS.defaults
@@ -15,7 +15,6 @@ export const IMAGE_TEXT = {
         type: 'empty',
         fields: [
           '/title',
-          '/description',
           '/image'
         ],
       },
@@ -24,14 +23,12 @@ export const IMAGE_TEXT = {
     schema: {
       properties: {
         title: {type: 'string'},
-        description: {type: 'string'},
         image: {type: 'string'},
         ...COMMON_OPTIONS.properties
       }
     },
     definitions: {
       title: {label: 'Title'},
-      description: { label: 'Description',},
       image: {
         label: 'Image',
         component: {

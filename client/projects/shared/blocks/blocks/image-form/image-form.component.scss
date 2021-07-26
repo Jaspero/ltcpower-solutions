@@ -1,0 +1,11 @@
+/* Mobile styles
+ *============================================================================*/
+
+@media (max-width: 900px) {
+  .form-container {
+    order: 2;
+  }
+  .img-container {
+    order: 1;
+  }
+}

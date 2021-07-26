@@ -28,18 +28,6 @@ export const PROJECTS_MODULE = {
           key: '/excerpt',
           label: 'Excerpt'
         },
-        {
-          key: '/featuredImage',
-          label: 'Featured Image'
-        },
-        {
-          key: '/description',
-          label: 'Description'
-        },
-        {
-          key: '/gallery',
-          label: 'Gallery'
-        }
       ]
     }
   },

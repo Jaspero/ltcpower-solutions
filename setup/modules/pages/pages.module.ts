@@ -12,6 +12,7 @@ import {FAQ} from './blocks/faq';
 import {SERVICECARD} from './blocks/service-card';
 import {IMAGE_TEXT} from './blocks/image-text';
 import {PROJECTS} from './blocks/projects';
+import {IMAGE_FORM} from './blocks/image-form';
 
 const blocks = [
   CONTENT_BLOCK,
@@ -19,6 +20,7 @@ const blocks = [
   BACKGROUND_HERO,
   FAQ,
   IMAGE_TEXT,
+  IMAGE_FORM,
   SERVICECARD,
   CARDS,
   MAP,

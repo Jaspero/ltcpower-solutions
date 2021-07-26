@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy, ElementRef} from '@angular/core';
+import {CommonBlockComponent} from '@shared/blocks/blocks/common.block';
 
 @Component({
   selector: 'jms-image-form',
@@ -6,11 +7,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./image-form.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ImageFormComponent implements OnInit {
+export class ImageFormComponent extends CommonBlockComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  constructor(
+    public el: ElementRef,
+  ) {super(el); }
+  data: any;
 
 }

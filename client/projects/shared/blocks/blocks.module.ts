@@ -30,6 +30,7 @@ export const BLOCKS = {
   columns: ThreeColumnComponent,
   'service-card': ServiceCardComponent,
   'image-text': ImageTextComponent,
+  'image-form': ImageFormComponent,
   projects: ProjectsComponent,
 };
 
@@ -44,6 +45,7 @@ const B_COMPONENTS = [
   ThreeColumnComponent,
   ServiceCardComponent,
   ImageTextComponent,
+  ImageFormComponent,
   ProjectsComponent
 ];
 
