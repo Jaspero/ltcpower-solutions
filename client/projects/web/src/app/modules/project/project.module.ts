@@ -3,25 +3,26 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {BlocksModule} from '@shared/blocks/blocks.module';
 import {PageResolver} from '../../resolvers/page.resolver';
-import {ProductComponent} from './product.component';
+import {ProjectComponent} from './project.component';
+
 
 const routes: Routes = [{
   path: ':id',
-  component: ProductComponent,
+  component: ProjectComponent,
   resolve: {
     page: PageResolver
   },
   data: {
-    collection: 'models'
+    collection: 'projects'
   }
 }];
 
 @NgModule({
-  declarations: [ProductComponent],
+  declarations: [ProjectComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     BlocksModule,
   ]
 })
-export class ProductModule { }
+export class ProjectModule { }

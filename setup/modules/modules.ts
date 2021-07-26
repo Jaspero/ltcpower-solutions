@@ -6,6 +6,7 @@ import {ROLES_MODULE} from './roles.module';
 import {USER_INVITES_MODULE} from './user-invites.module';
 import {USERS_MODULE} from './users.module';
 import {FAQ_MODULE} from './faq.module';
+import {PROJECTS_MODULE} from './projects.module';
 
 
 
@@ -19,6 +20,7 @@ export const MODULES = [
   USER_INVITES_MODULE,
   PAGES_MODULE,
   FORMS_MODULE,
+  PROJECTS_MODULE,
   FAQ_MODULE,
   AUTOMATIC_EMAILS_MODULE,
   SENT_EMAILS_MODULE,

@@ -21,6 +21,12 @@ export const STATIC_CONFIG = {
         value: '/m/pages'
       },
       {
+        icon: 'engineering',
+        label: 'Projects',
+        type: 'link',
+        value: '/m/projects'
+      },
+      {
         icon: 'question_answer',
         label: 'Faq',
         type: 'link',

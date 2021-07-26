@@ -1,1 +1,1 @@
-export const BASE_TITLE = 'LTC Power Rentals';
+export const BASE_TITLE = 'LTC Power Solutions';

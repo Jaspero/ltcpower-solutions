@@ -11,6 +11,7 @@ import {PROCESSED} from './processed.const';
 import {FAQ} from './blocks/faq';
 import {SERVICECARD} from './blocks/service-card';
 import {IMAGE_TEXT} from './blocks/image-text';
+import {PROJECTS} from './blocks/projects';
 
 const blocks = [
   CONTENT_BLOCK,
@@ -22,6 +23,7 @@ const blocks = [
   CARDS,
   MAP,
   COLUMNS,
+  PROJECTS,
 ];
 
 export const PAGES_MODULE = {

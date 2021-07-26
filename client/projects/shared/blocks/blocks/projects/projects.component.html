@@ -1,0 +1,18 @@
+<div class="grid p-y-xl">
+  <div class="col-12 ta-center">
+    <h1>Our projects</h1>
+  </div>
+  <div class="col-4 col-s-6 col-xs-12 ta-center" *ngFor="let project of projects$ | async;">
+    <div class="project-card flex fd-col ai-center">
+      <div class="project-card-header w-full ta-center p-a-s">
+        <h5>{{project.name}}</h5>
+      </div>
+      <div class="project flex ai-center jc-center" [ngStyle]="{'background-image': 'url('+ project.featuredImage +')'}">
+        <a [routerLink]="['/project',project.id]" class="gallery-btn">View Details</a>
+      </div>
+      <div class="description w-full ta-left p-x-s m-t-xs">
+        <p>{{project.excerpt}}</p>
+      </div>
+    </div>
+  </div>
+</div>

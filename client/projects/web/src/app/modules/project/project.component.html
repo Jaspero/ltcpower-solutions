@@ -1,0 +1,34 @@
+<section *ngIf="page" class="m-t-l">
+  <div class="grid jc-around p-y-l">
+    <div class="col-12 ta-center m-b-m">
+      <h3 class="c-accent">{{page.name}}</h3>
+    </div>
+    <div class="col-4 col-xs-12 description">
+      <h2 class="c-accent">Description</h2>
+      <p class="m-t-s">{{page.description}}</p>
+    </div>
+    <div class="col-4 col-xs-12 hero">
+      <img [src]="page.featuredImage" class="obj-contain featured-image">
+    </div>
+    <div class="flex fw-wrap w-full">
+      <div class="col-12 ta-center p-y-l">
+        <h3 class="c-accent">View Gallery</h3>
+      </div>
+      <div class="col-4 col-s-6 col-xs-12" *ngFor="let item of page.gallery">
+        <div class="gallery flex ai-center jc-center" [style]="{'background-image': 'url('+ item+ ')'}" (click)="viewGallery(item)">
+          <button class="zoom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="45" height="45" fill="#FF6B18">
+              <path d="M0 0h24v24H0V0z" fill="none"/>
+              <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 10-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0a4.5 4.5 0 11-.01-8.99A4.5 4.5 0 019.5 14z"/>
+              <path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #picture>
+  <div class="dialog-image" [ngStyle]="{'background-image': 'url('+ dialogPicture +')'}"></div>
+</ng-template>

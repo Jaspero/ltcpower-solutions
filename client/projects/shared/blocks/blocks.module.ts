@@ -5,9 +5,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {RouterModule} from '@angular/router';
 import {InlineEditorModule} from '@jaspero/fb-page-builder';
 import {LoadClickModule, SanitizeModule} from '@jaspero/ng-helpers';
-import {ProductCardComponent} from '@shared/blocks/blocks/inventory/components/product-card/product-card.component';
-import {SubCategoriesCardComponent} from '@shared/blocks/blocks/inventory/components/sub-categories-card/sub-categories-card.component';
-import {InventoryComponent} from '@shared/blocks/blocks/inventory/inventory.component';
 import {BlockRendererComponent} from './block-renderer/block-renderer.component';
 import {BackgroundHeroComponent} from './blocks/background-hero/background-hero.component';
 import {CardsComponent} from './blocks/cards/cards.component';
@@ -21,6 +18,7 @@ import {BlockLinkDirective} from './directives/block-link/block-link.directive';
 import { ServiceCardComponent } from './blocks/service-card/service-card.component';
 import { ImageTextComponent } from './blocks/image-text/image-text.component';
 import { ProjectsComponent } from './blocks/projects/projects.component';
+import { ImageFormComponent } from './blocks/image-form/image-form.component';
 
 export const BLOCKS = {
   content: ContentComponent,
@@ -32,6 +30,7 @@ export const BLOCKS = {
   columns: ThreeColumnComponent,
   'service-card': ServiceCardComponent,
   'image-text': ImageTextComponent,
+  projects: ProjectsComponent,
 };
 
 const B_COMPONENTS = [
@@ -44,7 +43,8 @@ const B_COMPONENTS = [
   MapComponent,
   ThreeColumnComponent,
   ServiceCardComponent,
-  ImageTextComponent
+  ImageTextComponent,
+  ProjectsComponent
 ];
 
 @NgModule({
@@ -53,13 +53,11 @@ const B_COMPONENTS = [
 
     BlockLinkDirective,
 
-    ProductCardComponent,
-    SubCategoriesCardComponent,
-
   ...B_COMPONENTS,
     ServiceCardComponent,
     ImageTextComponent,
     ProjectsComponent,
+    ImageFormComponent,
   ],
   exports: [
     ...B_COMPONENTS
