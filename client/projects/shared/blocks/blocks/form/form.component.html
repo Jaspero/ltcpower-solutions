@@ -1,4 +1,4 @@
-
+<div class="grid jc-start p-y-l">
 <form [formGroup]="fg" class=col-6>
 
   <div *ngIf="data.title" [fbPbSingleLineIE]="{property: 'title', data: data}" [innerHTML]="data.title | jpSanitize"></div>
@@ -20,7 +20,7 @@
         </label>
         <label class="col-12" [ngClass]="'field-col-' + (field.columnsDesktop || '12')" *ngSwitchCase="'textarea'">
           <span class="field-label" *ngIf="field.label">{{field.label}}</span>
-          <textarea class="input" [placeholder]="field.placeholder || ''" [formControlName]="field.id"></textarea>
+          <textarea class="input" [placeholder]="field.placeholder || ''" [formControlName]="field.id" cols="30" rows="6"></textarea>
           <span *ngIf="field.hint" class="field-description">{{field.hint}}</span>
         </label>
         <label class="field field-col-12-sm" [ngClass]="'field-col-' + (field.columnsDesktop || '12')" *ngSwitchCase="'select'">
@@ -48,6 +48,7 @@
     <button class="send-msg" type="submit" [disabled]="fg.invalid" [jpLoadClick]="submit()">{{data.action || 'Send message'}}</button>
   </div>
 </form>
+</div>
 
 
 <ng-container *ngIf="notification$ | async as notification">
