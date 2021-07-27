@@ -12,7 +12,6 @@ import {AppComponent} from './app.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {HeaderComponent} from './components/header/header.component';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
-import { FaqComponent } from './modules/faq/faq.component';
 
 
 export function init(injector: Injector) {
@@ -27,7 +26,6 @@ export function init(injector: Injector) {
     HeaderComponent,
     FooterComponent,
     DynamicFormComponent,
-    FaqComponent
   ],
   imports: [
     BrowserModule,

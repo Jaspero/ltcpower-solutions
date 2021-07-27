@@ -9,6 +9,12 @@ const routes: Routes = [
         .then(a => a.ProjectModule)
   },
   {
+    path: 'Faq',
+    loadChildren: () =>
+      import('./modules/faq/faq.module')
+        .then(a => a.FaqModule)
+  },
+  {
     path: '',
     loadChildren: () =>
       import('./modules/page/page.module')

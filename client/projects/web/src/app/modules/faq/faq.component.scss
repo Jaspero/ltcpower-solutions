@@ -1,0 +1,41 @@
+:host {
+  margin-top: 65px;
+}
+
+.question {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  &.active {
+    color: #FF6B18;
+  }
+  &:hover {
+    color: #FF6B18;
+    text-decoration: underline;
+  }
+}
+
+.answer {
+  max-height: 0;
+  transition: max-height .2s;
+  visibility: hidden;
+
+  &.active {
+    visibility: visible;
+    max-height: 300px;
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+/* Mobile styles
+ *============================================================================*/
+
+@media (max-width: 900px) {
+  .faq {
+    padding: 0 10px;
+  }
+}
