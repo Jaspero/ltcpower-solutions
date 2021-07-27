@@ -2,7 +2,6 @@ import {Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, TemplateR
 import {ActivatedRoute} from '@angular/router';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 import {MatDialog} from '@angular/material/dialog';
-import {Page} from '../page/page.interface';
 
 @UntilDestroy()
 @Component({
