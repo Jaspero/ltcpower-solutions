@@ -30,7 +30,7 @@
     "@jaspero/fb-form-ui": "2.0.5",
     "@jaspero/fb-monaco-editor": "2.0.4",
     "@jaspero/fb-page-builder": "3.1.2",
-    "@jaspero/fb-tinymce": "2.0.3",
+    "@jaspero/fb-tinymce": "2.2.3",
     "@jaspero/form-builder": "4.0.3",
     "@jaspero/jmsp-notes": "1.2.0",
     "@jaspero/ng-helpers": "5.0.0",

@@ -14,6 +14,7 @@ interface FormOptions extends CommonOptions {
   action?: string;
   form?: string;
   email?: string;
+  image?: string;
 }
 
 @Component({
