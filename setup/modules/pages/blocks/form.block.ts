@@ -7,7 +7,9 @@ export const FORM_BLOCK = {
   previewTemplate: `<jms-form [data]="data"></jms-form>`,
   previewValue: {
     title: '<h2>Form Title</h2>',
-    description: '<h3>Form description</h3>'
+    description: '<h3>Form description</h3>',
+    action: 'Send Message',
+    image: 'https://via.placeholder.com/500x320'
   },
   form: {
     segments: [
@@ -15,7 +17,8 @@ export const FORM_BLOCK = {
         type: 'empty',
         fields: [
           '/form',
-          '/email'
+          '/email',
+          '/action'
         ]
       },
       ...COMMON_OPTIONS.segment
@@ -26,6 +29,8 @@ export const FORM_BLOCK = {
         description: {type: 'string'},
         form: {type: 'string'},
         email: {type: 'string'},
+        action: {type: 'string'},
+        image: {type: 'string'},
         ...COMMON_OPTIONS.properties
       }
     },
@@ -59,6 +64,14 @@ export const FORM_BLOCK = {
               ]
             }
           }
+        }
+      },
+      action: {
+        label: 'Action'
+      },
+      image: {
+        component: {
+          type: 'image'
         }
       },
       ...COMMON_OPTIONS.definitions

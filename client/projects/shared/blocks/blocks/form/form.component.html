@@ -1,53 +1,76 @@
-<div class="grid jc-start p-y-l">
-<form [formGroup]="fg" class=col-6>
+<div class="grid jc-center p-y-l">
+  <form [formGroup]="fg" class="col-6 col-s-12">
 
-  <div *ngIf="data.title" [fbPbSingleLineIE]="{property: 'title', data: data}" [innerHTML]="data.title | jpSanitize"></div>
-  <div *ngIf="data.description" [fbPbSingleLineIE]="{property: 'description', data: data}" [innerHTML]="data.description | jpSanitize"></div>
+    <div *ngIf="data.title"
+      [fbPbSingleLineIE]="{property: 'title', data: data}"
+      [innerHTML]="data.title | jpSanitize"></div>
+    <div *ngIf="data.description"
+      [fbPbSingleLineIE]="{property: 'description', data: data}"
+      [innerHTML]="data.description | jpSanitize"></div>
 
-  <div class="flex fw-wrap" *ngIf="!loading">
-    <ng-container *ngFor="let field of form.fields">
-      <ng-container *ngIf="fieldValid(field)">
-        <ng-container [ngSwitch]="field.type">
-        <label class="col-6 col-s-12" [ngClass]="'field-col-' + (field.columnsDesktop || '12')" *ngSwitchCase="'text'">
-          <span class="field-label" *ngIf="field.label">{{field.label}}</span>
-          <input class="input" [placeholder]="field.placeholder || ''" [formControlName]="field.id">
-          <span *ngIf="field.hint" class="field-description">{{field.hint}}</span>
-        </label>
-        <label class="col-12" [ngClass]="'field-col-' + (field.columnsDesktop || '12')" *ngSwitchCase="'email'">
-          <span class="field-label" *ngIf="field.label">{{field.label}}</span>
-          <input class="input" type="email" [placeholder]="field.placeholder || ''" [formControlName]="field.id">
-          <span *ngIf="field.hint" class="field-description">{{field.hint}}</span>
-        </label>
-        <label class="col-12" [ngClass]="'field-col-' + (field.columnsDesktop || '12')" *ngSwitchCase="'textarea'">
-          <span class="field-label" *ngIf="field.label">{{field.label}}</span>
-          <textarea class="input" [placeholder]="field.placeholder || ''" [formControlName]="field.id" cols="30" rows="6"></textarea>
-          <span *ngIf="field.hint" class="field-description">{{field.hint}}</span>
-        </label>
-        <label class="field field-col-12-sm" [ngClass]="'field-col-' + (field.columnsDesktop || '12')" *ngSwitchCase="'select'">
-          <span class="field-label" *ngIf="field.label">{{field.label}}</span>
-          <select [formControlName]="field.id">
-            <option value="" disabled>{{field.placeholder || 'Select'}}</option>
-            <option *ngFor="let value of (field.added?.options || [])" [value]="value.value">
-              {{value.label}}
-            </option>
-          </select>
-          <span *ngIf="field.hint" class="field-description">{{field.hint}}</span>
-        </label>
-        <div class="field field-col-12-sm" [ngClass]="'field-col-' + (field.columnsDesktop || '12')" *ngSwitchCase="'checkbox'">
-          <span class="field-label" *ngIf="field.label">{{field.label}}</span>
-          <label *ngFor="let value of (field.added?.options || [])">
-            <input type="checkbox" [value]="value.value" [checked]="fg.get(field.id).value.includes(value.value)" (change)="onCheckboxChange($event, field.id)">
-            {{value.label}}
-          </label>
-        </div>
+    <div class="flex fw-wrap" *ngIf="!loading">
+      <ng-container *ngFor="let field of form.fields">
+        <ng-container *ngIf="fieldValid(field)">
+          <ng-container [ngSwitch]="field.type">
+            <label class="col-6 col-s-12"
+              [ngClass]="'field-col-' + (field.columnsDesktop || '12')"
+              *ngSwitchCase="'text'">
+              <span class="field-label" *ngIf="field.label">{{field.label}}</span>
+              <input class="input" [placeholder]="field.placeholder || ''" [formControlName]="field.id">
+              <span *ngIf="field.hint" class="field-description">{{field.hint}}</span>
+            </label>
+            <label class="col-12" [ngClass]="'field-col-' + (field.columnsDesktop || '12')" *ngSwitchCase="'email'">
+              <span class="field-label" *ngIf="field.label">{{field.label}}</span>
+              <input class="input" type="email" [placeholder]="field.placeholder || ''" [formControlName]="field.id">
+              <span *ngIf="field.hint" class="field-description">{{field.hint}}</span>
+            </label>
+            <label class="col-12" [ngClass]="'field-col-' + (field.columnsDesktop || '12')" *ngSwitchCase="'textarea'">
+              <span class="field-label" *ngIf="field.label">{{field.label}}</span>
+              <textarea class="input"
+                [placeholder]="field.placeholder || ''"
+                [formControlName]="field.id"
+                cols="30"
+                rows="6"></textarea>
+              <span *ngIf="field.hint" class="field-description">{{field.hint}}</span>
+            </label>
+            <label class="field field-col-12-sm"
+              [ngClass]="'field-col-' + (field.columnsDesktop || '12')"
+              *ngSwitchCase="'select'">
+              <span class="field-label" *ngIf="field.label">{{field.label}}</span>
+              <select [formControlName]="field.id">
+                <option value="" disabled>{{field.placeholder || 'Select'}}</option>
+                <option *ngFor="let value of (field.added?.options || [])" [value]="value.value">
+                  {{value.label}}
+                </option>
+              </select>
+              <span *ngIf="field.hint" class="field-description">{{field.hint}}</span>
+            </label>
+            <div class="field field-col-12-sm"
+              [ngClass]="'field-col-' + (field.columnsDesktop || '12')"
+              *ngSwitchCase="'checkbox'">
+              <span class="field-label" *ngIf="field.label">{{field.label}}</span>
+              <label *ngFor="let value of (field.added?.options || [])">
+                <input type="checkbox"
+                  [value]="value.value"
+                  [checked]="fg.get(field.id).value.includes(value.value)"
+                  (change)="onCheckboxChange($event, field.id)">
+                {{value.label}}
+              </label>
+            </div>
+          </ng-container>
+        </ng-container>
       </ng-container>
-      </ng-container>
-    </ng-container>
+    </div>
+    <div class="col-12">
+      <button class="send-msg"
+        type="submit"
+        [disabled]="fg.invalid"
+        [jpLoadClick]="submit()">{{data.action || 'Send message'}}</button>
+    </div>
+  </form>
+  <div class="col-6 col-s-12" *ngIf="data.image" [fbPbImageIE]="{property: 'image', data: data}">
+    <img [src]="data.image" />
   </div>
-  <div class="col-12">
-    <button class="send-msg" type="submit" [disabled]="fg.invalid" [jpLoadClick]="submit()">{{data.action || 'Send message'}}</button>
-  </div>
-</form>
 </div>
 
 
