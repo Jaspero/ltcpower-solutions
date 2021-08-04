@@ -1,8 +1,8 @@
-import {Component, OnInit, ChangeDetectionStrategy, ElementRef, Input} from '@angular/core';
-import {CommonBlockComponent} from '@shared/blocks/blocks/common.block';
+import {ChangeDetectionStrategy, Component, ElementRef, Input, OnInit} from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
+import {CommonBlockComponent} from '@shared/blocks/blocks/common.block';
 import {Observable} from 'rxjs';
-import {map, tap} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 import {Page} from '../../../../web/src/app/modules/page/page.interface';
 
 @Component({
@@ -36,8 +36,7 @@ export class FaqComponent extends CommonBlockComponent implements OnInit {
               id: it.id === 'home' ? '/' : '/' + it.id,
               ...(it.data() as any)
             })) as Page[]
-        ),
-        tap(console.log)
+        )
       );
   }
 }

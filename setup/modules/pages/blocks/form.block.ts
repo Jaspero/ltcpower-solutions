@@ -66,9 +66,7 @@ export const FORM_BLOCK = {
           }
         }
       },
-      action: {
-        label: 'Action'
-      },
+      action: {label: 'Action'},
       image: {
         component: {
           type: 'image'

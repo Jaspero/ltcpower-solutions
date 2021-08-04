@@ -50,15 +50,9 @@ export const COMMON_OPTIONS = {
         }
       }
     },
-    contained: {
-      label: 'Contained'
-    },
-    background: {
-      label: 'Background url'
-    },
-    backgroundRepeat: {
-      label: 'Background Repeat'
-    },
+    contained: {label: 'Contained'},
+    background: {label: 'Background url'},
+    backgroundRepeat: {label: 'Background Repeat'},
     backgroundSize: {
       label: 'Background size',
       component: {
