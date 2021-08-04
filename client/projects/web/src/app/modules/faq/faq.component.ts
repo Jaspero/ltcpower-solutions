@@ -1,12 +1,10 @@
-import {Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {AngularFirestore} from '@angular/fire/firestore';
 import {ActivatedRoute} from '@angular/router';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {Observable} from 'rxjs';
 import {FAQ} from '@shared/interfaces/faq.interface';
+import {Observable} from 'rxjs';
 import {Page} from '../page/page.interface';
-import {AngularFirestore} from '@angular/fire/firestore';
-
-
 
 @UntilDestroy()
 @Component({
@@ -25,7 +23,6 @@ export class FaqComponent implements OnInit {
   activeIndex: number;
   page: Page;
   faq$: Observable<FAQ[]>;
-
 
   ngOnInit() {
     this.faq$ = this.afs.collection<FAQ>('faq')

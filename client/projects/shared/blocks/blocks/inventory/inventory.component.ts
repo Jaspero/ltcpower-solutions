@@ -109,7 +109,7 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
             ref =>
               ref
                 .where('product', '==', product.id)
-                // .orderBy('order', 'asc')
+                .orderBy('order', 'asc')
           )
             .get()
         ),
@@ -164,7 +164,7 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
                   'products',
                   ref => {
                     let final: any = ref
-                      // .orderBy('order', 'asc');
+                      .orderBy('order', 'asc');
 
                     if (category) {
                       final = final.where(
@@ -300,5 +300,8 @@ export class InventoryComponent extends CommonBlockComponent implements OnInit {
     url.search = params;
     url = url.toString();
     window.history.pushState({url}, null, url);
+    window.scrollTo({
+      top: 0
+    })
   }
 }

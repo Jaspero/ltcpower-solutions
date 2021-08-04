@@ -1,6 +1,6 @@
 import {COMMON_OPTIONS} from './shared';
 
-export const CARDS = {
+export const CARDS_BLOCK = {
   id: 'cards',
   label: 'Cards',
   icon: 'view_column',
@@ -29,35 +29,32 @@ export const CARDS = {
         link: ''
       }
     ],
-    style: 'card-1',
+    title: 'Our Team',
     ...COMMON_OPTIONS.defaults
   },
   form: {
     segments: [
       {
+        fields: [
+          '/title'
+        ]
+      },
+      {
         title: 'Cards',
         array: '/cards',
         fields: [
-          '/style',
-          '/background',
           '/linkHref',
           '/image',
           '/name',
           '/role',
+          '/background',
           '/description'
-        ]
-      },
-      {
-        title: 'Style',
-        fields: [
-          '/style',
         ]
       },
       ...COMMON_OPTIONS.segment
     ],
     schema: {
       properties: {
-        style: {type: 'string'},
         cards: {
           type: 'array',
           items: {
@@ -73,51 +70,44 @@ export const CARDS = {
             }
           }
         },
-        image: {type: 'string'},
-        name: {type: 'string'},
-        role: {type: 'string'},
-        description: {type: 'string'},
+        title: {type: 'string'},
         ...COMMON_OPTIONS.properties
       }
     },
     definitions: {
-      style: {
-        label: 'Cards-style',
-        component: {
-          type: 'select',
-          configuration: {
-            dataSet: [
-              {name: 'style-one', value: 'card-1'},
-              {name: 'style-two', value: 'card-2'},
-              {name: 'style-three', value: 'card-3'},
-            ]
-          }
-        }
-      },
-      image: {
+      title: {label: 'Title'},
+      'cards/image': {
         label: 'Image',
         component: {
           type: 'image'
         }
       },
-      name: {label: 'Name'},
-      role: {label: 'Role'},
-      description: {label: 'Description'},
-      'cards/linkHref': {label: 'Link'},
-      'cards/style': {
-        label: 'Card-style',
+      'cards/name': {label: 'Name'},
+      'cards/role': {label: 'Role'},
+      'cards/description': {
+        label: 'Description',
         component: {
-          type: 'select',
+          type: 'tinymce'
+        }
+      },
+      'cards/linkHref': {
+        label: 'Link',
+        component: {
+          type: 'input',
           configuration: {
-            dataSet: [
-              {name: 'Blank', value: ''},
-              {name: 'Border', value: 'border'},
-              {name: 'Shadow', value: 'shadow'},
-            ]
+            type: 'url'
           }
         }
       },
-      'cards/background': {label: 'Card-background'},
+      'cards/background': {
+        label: 'Background',
+        component: {
+          type: 'input',
+          configuration: {
+            type: 'color'
+          }
+        }
+      },
       ...COMMON_OPTIONS.definitions
     }
   }

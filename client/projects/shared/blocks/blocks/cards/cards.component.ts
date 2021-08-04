@@ -3,7 +3,6 @@ import {MatDialog} from '@angular/material/dialog';
 import {CommonBlockComponent, CommonOptions} from '@shared/blocks/blocks/common.block';
 import {background} from '@shared/blocks/utils/background';
 
-
 interface Card {
   title?: string;
   subtitle?: string;
@@ -11,13 +10,12 @@ interface Card {
   link?: string;
   linkHref?: string;
   image?: string;
-  style?: 'shadow' | 'border' | '';
   background?: string;
 }
 
 interface CardOptions extends CommonOptions {
   cards: Card[];
-  style: 'card-1' | 'card-2' | 'card-3',
+  title: string;
 }
 
 @Component({
@@ -27,11 +25,12 @@ interface CardOptions extends CommonOptions {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardsComponent extends CommonBlockComponent {
-
   constructor(
     public el: ElementRef,
     private dialog: MatDialog,
-  ) {super(el); }
+  ) {
+    super(el);
+  }
 
   @ViewChild('dialogDescription')
   dialogDescription: TemplateRef<any>;
@@ -41,10 +40,6 @@ export class CardsComponent extends CommonBlockComponent {
 
   @Input()
   data: CardOptions;
-
-  get addedClasses() {
-    return [this.data.style];
-  }
 
   cardStyle(card: Card) {
     return background(card);
