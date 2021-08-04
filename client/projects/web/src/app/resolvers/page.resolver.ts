@@ -30,9 +30,10 @@ export class PageResolver implements Resolve<any> {
 
         if (!skipMeta) {
           const valuesToSet = {...(page.meta || {})};
+          const title = valuesToSet.title || page.title;
           this.title.setTitle(
-            valuesToSet.title
-              ? `${valuesToSet.title} | ${BASE_TITLE}`
+            title
+              ? `${title} | ${BASE_TITLE}`
               : BASE_TITLE
           );
 

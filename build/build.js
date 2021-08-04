@@ -13,9 +13,9 @@ const minifyOptions = {
   processScripts: ['application/ld+json']
 };
 
-const URL = 'https://jaspero-jms.web.app/';
+const URL = 'https://www.ltcpowerrentals.com/';
 const BASE_PATH = join(__dirname, '..', 'public/web');
-const BASE_TITLE = 'JMS';
+const BASE_TITLE = 'LTC';
 const DELIMITER = '-';
 const BASE_URL = 'https://firebasestorage.googleapis.com/v0/b/jaspero-automated-tests.appspot.com/o/';
 const PAGES = [
