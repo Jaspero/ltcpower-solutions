@@ -6,7 +6,7 @@
           <img src="assets/icons/logo.svg" alt="Logo">
         </a>
       </div>
-      <p class="m-l-m date">© {{year}} LTC power rentals. All rights reserved.</p>
+      <p class="m-l-m date">© {{year}} LTC Power Rentals. All rights reserved.</p>
     </div>
     <div class="footer-links">
         <a *ngFor="let footerLink of pages; last as last" [class.m-r-s]="!last"  [routerLink]="footerLink.id" >{{footerLink.title}}</a>

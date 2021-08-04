@@ -1,6 +1,6 @@
 import {COMMON_OPTIONS} from './shared';
 
-export const BACKGROUND_HERO = {
+export const BACKGROUND_HERO_BLOCK = {
   id: 'hero',
   label: 'Hero',
   icon: 'subject',

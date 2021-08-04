@@ -1,25 +1,25 @@
 import {FORMAT_SEARCH} from '../shared/format-search';
 import {META} from '../shared/meta';
 import {ORDER} from '../shared/order';
-import {BACKGROUND_HERO} from './blocks/background-hero';
-import {CARDS} from './blocks/cards';
+import {BACKGROUND_HERO_BLOCK} from './blocks/background-hero.block';
+import {CARDS_BLOCK} from './blocks/cards.block';
+import {COLUMNS_BLOCK} from './blocks/columns.block';
 import {CONTENT_BLOCK} from './blocks/content.block';
+import {FAQ_BLOCK} from './blocks/faq.block';
 import {FORM_BLOCK} from './blocks/form.block';
-import {INVENTORY} from './blocks/inventory';
-import {MAP} from './blocks/map';
-import {COLUMNS} from './blocks/three-columns';
+import {INVENTORY_BLOCK} from './blocks/inventory.block';
+import {MAP_BLOCK} from './blocks/map.block';
 import {PROCESSED} from './processed.const';
-import {FAQ} from './blocks/faq';
 
 const blocks = [
+  BACKGROUND_HERO_BLOCK,
+  CARDS_BLOCK,
+  COLUMNS_BLOCK,
   CONTENT_BLOCK,
+  FAQ_BLOCK,
   FORM_BLOCK,
-  INVENTORY,
-  BACKGROUND_HERO,
-  FAQ,
-  CARDS,
-  MAP,
-  COLUMNS,
+  INVENTORY_BLOCK,
+  MAP_BLOCK
 ];
 
 export const PAGES_MODULE = {

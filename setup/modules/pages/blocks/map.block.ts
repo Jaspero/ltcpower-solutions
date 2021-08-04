@@ -1,13 +1,11 @@
 import {COMMON_OPTIONS} from './shared';
 
-export const MAP = {
+export const MAP_BLOCK = {
   id: 'map',
   label: 'Map',
-  icon: 'subject',
+  icon: 'map',
   previewTemplate: `<jms-map [data]="data"></jms-map>`,
   previewValue: {
-    content:
-      '<h1>Custom Title</h1><h2>Custom Subtitle</h2><p>Custom content</p>',
     ...COMMON_OPTIONS.defaults
   },
   form: {
@@ -25,9 +23,7 @@ export const MAP = {
       }
     },
     definitions: {
-      content: {
-        label: 'Link'
-      },
+      link: {label: 'Link'},
       ...COMMON_OPTIONS.definitions
     }
   }

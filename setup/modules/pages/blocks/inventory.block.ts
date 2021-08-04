@@ -1,9 +1,9 @@
 import {COMMON_OPTIONS} from './shared';
 
-export const INVENTORY = {
+export const INVENTORY_BLOCK = {
   id: 'inventory',
   label: 'Inventory',
-  icon: 'subject',
+  icon: 'construction',
   previewTemplate: `<jms-inventory [data]="data"></jms-inventory>`,
   previewValue: {
     categories: true,
