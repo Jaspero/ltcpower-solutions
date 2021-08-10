@@ -13,11 +13,11 @@ const minifyOptions = {
   processScripts: ['application/ld+json']
 };
 
-const URL = 'https://www.ltcpowerrentals.com/';
+const URL = 'https://www.ltcpowersolutions.com/';
 const BASE_PATH = join(__dirname, '..', 'public/web');
 const BASE_TITLE = 'LTC';
 const DELIMITER = '-';
-const BASE_URL = 'https://firebasestorage.googleapis.com/v0/b/jaspero-automated-tests.appspot.com/o/';
+const BASE_URL = 'https://firebasestorage.googleapis.com/v0/b/jaspero-ltc.appspot.com/o/';
 const PAGES = [
   {
     url: '',
