@@ -21,7 +21,7 @@ interface InventoryOptions extends CommonOptions {
 
 @UntilDestroy()
 @Component({
-  selector: 'jms-inventory-block',
+  selector: 'jms-inventory',
   templateUrl: './inventory.component.html',
   styleUrls: ['./inventory.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
