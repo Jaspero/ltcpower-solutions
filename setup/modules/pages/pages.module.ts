@@ -7,8 +7,9 @@ import {COLUMNS_BLOCK} from './blocks/columns.block';
 import {CONTENT_BLOCK} from './blocks/content.block';
 import {FAQ_BLOCK} from './blocks/faq.block';
 import {FORM_BLOCK} from './blocks/form.block';
-import {INVENTORY_BLOCK} from './blocks/inventory.block';
+import {IMAGE_TEXT_BLOCK} from './blocks/image-text.block';
 import {MAP_BLOCK} from './blocks/map.block';
+import {PROJECTS_BLOCK} from './blocks/projects.block';
 import {PROCESSED} from './processed.const';
 
 const blocks = [
@@ -18,8 +19,9 @@ const blocks = [
   CONTENT_BLOCK,
   FAQ_BLOCK,
   FORM_BLOCK,
-  INVENTORY_BLOCK,
-  MAP_BLOCK
+  MAP_BLOCK,
+  IMAGE_TEXT_BLOCK,
+  PROJECTS_BLOCK
 ];
 
 export const PAGES_MODULE = {

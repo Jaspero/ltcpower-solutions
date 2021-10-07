@@ -1,0 +1,13 @@
+<div class="grid p-y-l">
+  <div class="col-6 col-s-12 image-container">
+    <img [src]="data.image">
+  </div>
+  <div class="col-6 col-s-12 text-container">
+    <div *ngIf="data.title"
+      [fbPbSingleLineIE]="{property: 'title', data: data}"
+      [innerHTML]="data.title | jpSanitize"></div>
+    <div *ngIf="data.description"
+      [fbPbSingleLineIE]="{property: 'description', data: data}"
+      [innerHTML]="data.description | jpSanitize"></div>
+  </div>
+</div>

@@ -12,7 +12,9 @@ import {CommonBlockComponent} from './blocks/common.block';
 import {ContentComponent} from './blocks/content/content.component';
 import {FaqComponent} from './blocks/faq/faq.component';
 import {FormComponent} from './blocks/form/form.component';
+import {ImageTextComponent} from './blocks/image-text/image-text.component';
 import {MapComponent} from './blocks/map/map.component';
+import {ProjectsComponent} from './blocks/projects/projects.component';
 import {ThreeColumnComponent} from './blocks/three-column/three-column.component';
 import {BlockLinkDirective} from './directives/block-link/block-link.directive';
 
@@ -24,6 +26,8 @@ export const BLOCKS = {
   cards: CardsComponent,
   map: MapComponent,
   columns: ThreeColumnComponent,
+  'image-text': ImageTextComponent,
+  projects: ProjectsComponent
 };
 
 const B_COMPONENTS = [
@@ -35,6 +39,8 @@ const B_COMPONENTS = [
   CardsComponent,
   MapComponent,
   ThreeColumnComponent,
+  ImageTextComponent,
+  ProjectsComponent
 ];
 
 @NgModule({
@@ -43,7 +49,7 @@ const B_COMPONENTS = [
 
     BlockLinkDirective,
 
-  ...B_COMPONENTS,
+  ...B_COMPONENTS
   ],
   exports: [
     ...B_COMPONENTS

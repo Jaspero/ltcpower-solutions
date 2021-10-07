@@ -3,6 +3,7 @@ import {SENT_EMAILS_MODULE} from './emails/sent-emails.module';
 import {FAQ_MODULE} from './faq.module';
 import {FORMS_MODULE} from './forms.module';
 import {PAGES_MODULE} from './pages/pages.module';
+import {PROJECTS_MODULE} from './projects.module';
 import {ROLES_MODULE} from './roles.module';
 import {USER_INVITES_MODULE} from './user-invites.module';
 import {USERS_MODULE} from './users.module';
@@ -19,5 +20,6 @@ export const MODULES = [
   FORMS_MODULE,
   FAQ_MODULE,
   AUTOMATIC_EMAILS_MODULE,
-  SENT_EMAILS_MODULE
+  SENT_EMAILS_MODULE,
+  PROJECTS_MODULE
 ];

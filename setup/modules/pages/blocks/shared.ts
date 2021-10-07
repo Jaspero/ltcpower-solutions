@@ -114,6 +114,10 @@ export const COMMON_OPTIONS = {
   defaults: {
     size: 'regular',
     contained: true,
-    verticalAlignment: 'center'
+    verticalAlignment: 'center',
+    background: '',
+    additionalStyle: '',
+    backgroundRepeat: '',
+    backgroundSize: ''
   }
 };
