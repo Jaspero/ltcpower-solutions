@@ -7,7 +7,7 @@ import {CommonBlockComponent} from '@shared/blocks/blocks/common.block';
   styleUrls: ['./image-text.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ImageTextComponent  extends CommonBlockComponent {
+export class ImageTextComponent extends CommonBlockComponent {
   constructor(
     public el: ElementRef,
   ) {super(el); }
